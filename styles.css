@@ -1,0 +1,25 @@
+#hr-diagram {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+svg {
+  background-color: black;
+  /* stroke: white; */
+  fill: white;
+}
+
+/* .axis path,
+.axis line {
+  stroke: white;
+}
+
+.axis text {
+  fill: white;
+}
+ */
