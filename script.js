@@ -11,6 +11,19 @@ const svg = d3
   .attr("width", width)
   .attr("height", height);
 
+// Create a div for the tooltip and style it
+var tooltip = d3
+  .select("body")
+  .append("div")
+  .style("position", "absolute")
+  .style("background", "#fff")
+  .style("padding", "5px")
+  .style("border", "1px solid #000")
+  .style("border-radius", "5px")
+  .style("pointer-events", "none") // to prevent the tooltip from interfering with mouse events
+  .style("display", "none")
+  .style("color", "black");
+
 // Real star data for the Orion constellation, including radius (in solar radii), luminosity, and temperature
 const stars = [
   {
@@ -238,34 +251,26 @@ window.addEventListener("resize", () => {
     .attr("y", (d) => yScale(d.luminosity));
 });
 
-// Create a div for the tooltip and style it
-var tooltip = d3
-  .select("body")
-  .append("div")
-  .style("position", "absolute")
-  .style("background", "#fff")
-  .style("padding", "5px")
-  .style("border", "1px solid #000")
-  .style("border-radius", "5px")
-  .style("pointer-events", "none") // to prevent the tooltip from interfering with mouse events
-  .style("display", "none");
-
-// Add mouseover, mousemove, and mouseout event listeners to the circles
 svg
   .selectAll("circle")
   .on("mouseover", (event, d) => {
-    // Show the tooltip and set its text
+    // Directly access the temperature and luminosity properties of the datum
+
     tooltip.style("display", "block");
     tooltip.html(
-      `Temperature: ${d.temperature} K <br>Luminosity: ${d.luminosity} L☉)`
+      `Temperature: ${d.temperature
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} K <br>Luminosity: ${d.luminosity
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} L⊙<br>Radius: ${d.radius
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} R⊙`
     );
   })
   .on("mousemove", (event) => {
-    // Update the position of the tooltip
     tooltip.style("left", event.pageX + 10 + "px");
     tooltip.style("top", event.pageY - 10 + "px");
   })
   .on("mouseout", () => {
-    // Hide the tooltip
     tooltip.style("display", "none");
   });
