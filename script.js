@@ -12,7 +12,7 @@ const svg = d3
   .attr("height", height);
 
 // Create a div for the tooltip and style it
-var tooltip = d3
+let tooltip = d3
   .select("body")
   .append("div")
   .style("position", "absolute")
@@ -24,105 +24,6 @@ var tooltip = d3
   .style("display", "none")
   .style("color", "black");
 
-// Real star data for the Orion constellation, including radius (in solar radii), luminosity, and temperature
-const stars = [
-  {
-    temperature: 27960,
-    luminosity: 537000,
-    name: "Alnilam",
-    spectralClass: "B0 Ia",
-    radius: 32.4,
-  },
-  {
-    temperature: 33000,
-    luminosity: 250000,
-    name: "Alnitak (Aa)",
-    spectralClass: "O9.5Iab",
-    radius: 20.0,
-  },
-  {
-    temperature: 26000,
-    luminosity: 32000,
-    name: "Alnitak (Ab)",
-    spectralClass: "B1IV",
-    radius: 7.3,
-  },
-
-  {
-    temperature: 21000,
-    luminosity: 9211,
-    name: "Bellatrix",
-    spectralClass: "B2 V (B2 III)",
-    radius: 7.75,
-  },
-  {
-    temperature: 3500,
-    luminosity: 7600,
-    name: "Betelgeuse",
-    spectralClass: "M1–M2 Ia–ab",
-    radius: 887.0,
-  },
-  {
-    temperature: 33000,
-    luminosity: 68000,
-    name: "Hatysa (Aa1)",
-    spectralClass: "O9 III",
-    radius: 8.3,
-  },
-  {
-    temperature: 26000,
-    luminosity: 8630,
-    name: "Hatysa (Aa2)",
-    spectralClass: "B0.8 III/IV",
-    radius: 5.4,
-  },
-
-  {
-    temperature: 32000,
-    luminosity: 190000,
-    name: "Mintaka (Aa1)",
-    spectralClass: "O9.5II",
-    radius: 16.5,
-  },
-  {
-    temperature: 26000,
-    luminosity: 63000,
-    name: "Mintaka (Ab)",
-    spectralClass: "B0IV",
-    radius: 10.4,
-  },
-  {
-    temperature: 30000,
-    luminosity: 16000,
-    name: "Mintaka (Aa2)",
-    spectralClass: "B1V",
-    radius: 6.5,
-  },
-  {
-    temperature: 29000,
-    luminosity: 3300,
-    name: "Mintaka (HD 36485)",
-    spectralClass: "B3V",
-    radius: 5.7,
-  },
-
-  {
-    temperature: 26000,
-    luminosity: 61500,
-    name: "Rigel (A)",
-    spectralClass: "B8Ia",
-    radius: 78.9,
-  },
-
-  {
-    temperature: 27000,
-    luminosity: 56881,
-    name: "Saiph",
-    spectralClass: "B0.5 Ia",
-    radius: 22.2,
-  },
-];
-
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
@@ -131,13 +32,14 @@ const xScale = d3
 
 const yScale = d3
   .scaleLog()
-  .domain([0.1, 10000000])
+  .domain([0.00001, 10000000])
   .range([height - margin.bottom, margin.top]);
 
-const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]);
+//const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
+const radiusScale = d3.scaleLog().domain([0.1, 100]).range([1, 15]);
 
 // Color scale based on temperature (spectral class)
-var colors = [
+let colors = [
   "#FB1108",
   "#FD150B",
   "#FA7806",
@@ -151,149 +53,340 @@ var colors = [
   "#1C5FA5",
   "#172484",
 ];
-var temps = [
+let temps = [
   2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 14000, 20000, 30000,
 ];
-var colorScale = d3.scaleLinear().domain(temps).range(colors);
 
-// Add headline
-svg
-  .append("text")
-  .attr("class", "headline")
-  .attr("x", width / 2)
-  .attr("y", margin.top / 2 + 10)
-  .attr("text-anchor", "middle")
-  .style("font-size", "24px")
-  .style("text-decoration", "none")
-  .text("Hertzsprung-Russell Diagram");
-// Create circles for stars on the HR diagram with radii based on the star size and colored by temperature
-svg
-  .selectAll("circle")
-  .data(stars)
-  .enter()
-  .append("circle")
-  .attr("cx", (d) => xScale(d.temperature))
-  .attr("cy", (d) => yScale(d.luminosity))
-  .attr("r", (d) => radiusScale(d.radius))
-  .style("fill", (d) => colorScale(d.temperature));
+let colorScale = d3.scaleLinear().domain(temps).range(colors);
 
-// Add labels to stars
-svg
-  .selectAll(".star-label") // Add a class here
-  .data(stars)
-  .enter()
-  .append("text")
-  .attr("class", "star-label") // And here
-  .attr("x", (d) => xScale(d.temperature) + 10)
-  .attr("y", (d) => yScale(d.luminosity))
-  .text((d) => d.name)
-  .style("font-size", "15px") // Increase the font size
-  .style("fill", "#fff") // Change the font color to white
-  .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
-// Add x-axis
-const xAxis = d3.axisBottom(xScale).ticks(5, "s");
+d3.json("stars.json").then(function (stars) {
+  // Filter the stars to only include stars with a constellation
+  const starsWithConstellation = stars.filter((star) => star.constellation);
 
-svg
-  .append("g")
-  .attr("class", "x-axis")
-  .attr("transform", `translate(0, ${height - margin.bottom})`)
-  .call(xAxis);
+  // Create an array of constellations
+  const constellations = [
+    ...new Set(starsWithConstellation.map((star) => star.constellation)),
+  ];
 
-// Add y-axis
-const yAxis = d3.axisLeft(yScale).ticks(5, "s");
-svg
-  .append("g")
-  .attr("class", "y-axis")
-  .attr("transform", `translate(${margin.left}, 0)`)
-  .call(yAxis);
+  // Select the dropdown element
+  const dropdown = d3.select("#dropdown");
 
-// Add x-axis label
-svg
-  .append("text")
-  .attr("class", "x-label")
-  .attr("x", width / 2)
-  .attr("y", height - 10)
-  .style("text-anchor", "middle")
-  .text("Temperature (K)");
+  // Add an option for "All", "Closest Stars", and "Brightest Stars"
+  dropdown
+    .selectAll("option")
+    .data([
+      "All",
+      "Closest Stars 100 ly",
+      "Closest Stars 1000 ly",
+      "Brightest Stars",
+    ])
+    .enter()
+    .append("option")
+    .text((d) => d);
 
-// Add y-axis label
-svg
-  .append("text")
-  .attr("class", "y-label")
-  .attr("x", -height / 2)
-  .attr("y", 10)
-  .attr("transform", "rotate(-90)")
-  .style("text-anchor", "middle")
-  .text("Luminosity (Solar Units)");
+  // Add a divider
+  dropdown.append("option").text("----------").attr("disabled", true);
 
-svg
-  .selectAll("circle")
-  .on("mouseover", (event, d) => {
-    // Directly access the temperature and luminosity properties of the datum
+  // Add an option for each constellation
+  dropdown
+    .selectAll("option.constellation")
+    .data(constellations)
+    .enter()
+    .append("option")
+    .attr("class", "constellation")
+    .text((d) => d);
 
-    tooltip.style("display", "block");
-    tooltip.html(
-      `Temperature: ${d.temperature
-        .toLocaleString("en-US", { useGrouping: true })
-        .replace(/,/g, " ")} K <br>Luminosity: ${d.luminosity
-        .toLocaleString("en-US", { useGrouping: true })
-        .replace(/,/g, " ")} L⊙<br>Radius: ${d.radius
-        .toLocaleString("en-US", { useGrouping: true })
-        .replace(/,/g, " ")} R⊙`
-    );
-  })
-  .on("mousemove", (event) => {
-    tooltip.style("left", event.pageX + 10 + "px");
-    tooltip.style("top", event.pageY - 10 + "px");
-  })
-  .on("mouseout", () => {
-    tooltip.style("display", "none");
+  // Add an event listener to the dropdown
+  dropdown.on("change", function () {
+    // Get the selected option
+    const selectedOption = d3.select(this).property("value");
+
+    // Filter the stars based on the selected option
+    /*    let filteredStars;
+    if (selectedOption === "Closest Stars 100 ly") {
+      filteredStars = stars.filter((star) => star.distance <= 100);
+    } else if (selectedOption === "Closest Stars 1000 ly") {
+      filteredStars = stars.filter((star) => star.distance <= 1000);
+    } else if (selectedOption === "Brightest Stars") {
+      filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
+    } else {
+      filteredStars =
+        selectedOption === "All"
+          ? stars
+          : stars.filter((star) => star.constellation === selectedOption);
+    } */
+
+    let filteredStars;
+
+    switch (selectedOption) {
+      case "Closest Stars 100 ly":
+        filteredStars = stars.filter((star) => star.distance <= 100);
+        break;
+      case "Closest Stars 1000 ly":
+        filteredStars = stars.filter((star) => star.distance <= 1000);
+        break;
+      case "Brightest Stars":
+        filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
+        break;
+      case "All":
+        filteredStars = stars;
+        break;
+      default:
+        filteredStars = stars.filter(
+          (star) => star.constellation === selectedOption
+        );
+    }
+    // Update the visualization with the filtered stars
+    let circles = svg.selectAll("circle").data(filteredStars, (d) => d.name);
+    circles
+      .enter()
+      .append("circle")
+      .merge(circles)
+      .attr("cx", (d) => xScale(d.temperature))
+      .attr("cy", (d) => yScale(d.luminosity))
+      .attr("r", (d) => radiusScale(d.radius))
+      .style("fill", (d) => colorScale(d.temperature));
+
+    circles
+      .attr("cx", (d) => xScale(d.temperature))
+      .attr("cy", (d) => yScale(d.luminosity));
+
+    circles
+      .enter()
+      .append("circle")
+      .merge(circles)
+      .attr("cx", (d) => xScale(d.temperature))
+      .attr("cy", (d) => yScale(d.luminosity))
+      .attr("r", (d) => radiusScale(d.radius))
+      .style("fill", (d) => colorScale(d.temperature))
+
+      .on("mouseover", (event, d) => {
+        tooltip.style("display", "block");
+        tooltip.html(`
+        <strong>${d.name}</strong><br>
+        Temperature: ${d.temperature
+          .toLocaleString("en-US", { useGrouping: true })
+          .replace(/,/g, " ")} K <br>
+        Luminosity: ${d.luminosity
+          .toLocaleString("en-US", { useGrouping: true })
+          .replace(/,/g, " ")} L⊙<br>
+        Radius: ${d.radius
+          .toLocaleString("en-US", { useGrouping: true })
+          .replace(/,/g, " ")} R⊙<br>
+        Apparent Magnitude: ${d.apparentMagnitude
+          .toLocaleString("en-US", { useGrouping: true })
+          .replace(/,/g, " ")}<br>
+        Distance: ${d.distance
+          .toLocaleString("en-US", { useGrouping: true })
+          .replace(/,/g, " ")} ly<br>
+        Age: ${
+          d.age
+            ? d.age
+                .toLocaleString("en-US", { useGrouping: true })
+                .replace(/,/g, " ")
+            : "N/A"
+        } y<br>
+        Mass: ${
+          d.mass
+            ? d.mass
+                .toLocaleString("en-US", { useGrouping: true })
+                .replace(/,/g, " ")
+            : "N/A"
+        } M⊙
+      `);
+      })
+      .on("mousemove", (event) => {
+        tooltip.style("left", event.pageX + 10 + "px");
+        tooltip.style("top", event.pageY - 10 + "px");
+      })
+      .on("mouseout", () => {
+        tooltip.style("display", "none");
+      });
+
+    const labels = svg
+      .selectAll(".star-label")
+      .data(filteredStars, (d) => d.name);
+
+    labels
+      .enter()
+      .append("text")
+      .attr("class", "star-label")
+      .attr("x", (d) => xScale(d.temperature) + 10)
+      .attr("y", (d) => yScale(d.luminosity))
+      .text((d) => d.name)
+      .style("font-size", "15px")
+      .style("fill", "#fff")
+      .style("text-shadow", "2px 2px 4px #000");
+
+    labels
+      .attr("x", (d) => xScale(d.temperature) + 10)
+      .attr("y", (d) => yScale(d.luminosity));
+
+    circles.exit().remove();
+    labels.exit().remove();
   });
 
-window.addEventListener("resize", () => {
-  width = parseInt(container.style("width"));
-  height = parseInt(container.style("height"));
+  svg.selectAll("circle");
 
-  // Update the position of the x-axis label
   svg
-    .select(".x-label")
+    .append("text")
+    .attr("class", "headline")
     .attr("x", width / 2)
-    .attr("y", height - margin.bottom + 10);
-
-  // Update the viewBox of the SVG
-  svg.attr("viewBox", `0 0 ${width} ${height}`);
-
-  // Update the scales
-  xScale.range([margin.left, width - margin.right]);
-  yScale.range([height - margin.bottom, margin.top]);
-
-  // Redraw the axes
-  svg
-    .select(".x-axis")
-    .attr("transform", `translate(0, ${height - margin.bottom})`)
-    .call(d3.axisBottom(xScale));
-
-  svg.select(".y-axis").call(d3.axisLeft(yScale));
-
-  // Update the positions of the circles
+    .attr("y", margin.top / 2 + 10)
+    .attr("text-anchor", "middle")
+    .style("font-size", "24px")
+    .style("text-decoration", "none")
+    .text("H-R Diagram");
+  // Create circles for stars on the HR diagram with radii based on the star size and colored by temperature
   svg
     .selectAll("circle")
+    .data(stars)
+    .enter()
+    .append("circle")
     .attr("cx", (d) => xScale(d.temperature))
-    .attr("cy", (d) => yScale(d.luminosity));
+    .attr("cy", (d) => yScale(d.luminosity))
+    .attr("r", (d) => radiusScale(d.radius))
+    .style("fill", (d) => colorScale(d.temperature));
 
-  // Update the position of the headline
-  svg.select(".headline").attr("x", width / 2);
-
-  svg.select(".y-label").attr("x", -height / 2);
-
-  // Update the position of the x-axis label
+  // Add labels to stars
   svg
-    .select(".x-label")
-    .attr("x", width / 2)
-    .attr("y", height - margin.bottom + 30); // Adjust this value as needed
-
-  svg
-    .selectAll(".star-label") // Select only the star labels
+    .selectAll(".star-label") // Add a class here
+    .data(stars)
+    .enter()
+    .append("text")
+    .attr("class", "star-label") // And here
     .attr("x", (d) => xScale(d.temperature) + 10)
-    .attr("y", (d) => yScale(d.luminosity));
+    .attr("y", (d) => yScale(d.luminosity))
+    .text((d) => d.name)
+    .style("font-size", "15px") // Increase the font size
+    .style("fill", "#fff") // Change the font color to white
+    .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
+  // Add x-axis
+  const xAxis = d3.axisBottom(xScale).ticks(5, "s");
+
+  svg
+    .append("g")
+    .attr("class", "x-axis")
+    .attr("transform", `translate(0, ${height - margin.bottom})`)
+    .call(xAxis);
+
+  // Add y-axis
+  const yAxis = d3.axisLeft(yScale).ticks(5, "s");
+  svg
+    .append("g")
+    .attr("class", "y-axis")
+    .attr("transform", `translate(${margin.left}, 0)`)
+    .call(yAxis);
+
+  // Add x-axis label
+  svg
+    .append("text")
+    .attr("class", "x-label")
+    .attr("x", width / 2)
+    .attr("y", height - 10)
+    .style("text-anchor", "middle")
+    .text("Temperature (K)");
+
+  // Add y-axis label
+  svg
+    .append("text")
+    .attr("class", "y-label")
+    .attr("x", -height / 2)
+    .attr("y", 15)
+    .attr("transform", "rotate(-90)")
+    .style("text-anchor", "middle")
+    .text("Luminosity (Solar Units)");
+
+  svg
+    .selectAll("circle")
+    .on("mouseover", (event, d) => {
+      tooltip.style("display", "block");
+      tooltip.html(`
+      <strong>${d.name}</strong><br>
+      Temperature: ${d.temperature
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} K <br>
+      Luminosity: ${d.luminosity
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} L⊙<br>
+      Radius: ${d.radius
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} R⊙<br>
+      Apparent Magnitude: ${d.apparentMagnitude
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")}<br>
+      Distance: ${d.distance
+        .toLocaleString("en-US", { useGrouping: true })
+        .replace(/,/g, " ")} ly<br>
+      Age: ${
+        d.age
+          ? d.age
+              .toLocaleString("en-US", { useGrouping: true })
+              .replace(/,/g, " ")
+          : "N/A"
+      } y<br>
+      Mass: ${
+        d.mass
+          ? d.mass
+              .toLocaleString("en-US", { useGrouping: true })
+              .replace(/,/g, " ")
+          : "N/A"
+      } M⊙
+    `);
+    })
+    .on("mousemove", (event) => {
+      tooltip.style("left", event.pageX + 10 + "px");
+      tooltip.style("top", event.pageY - 10 + "px");
+    })
+    .on("mouseout", () => {
+      tooltip.style("display", "none");
+    });
+
+  window.addEventListener("resize", () => {
+    width = parseInt(container.style("width"));
+    height = parseInt(container.style("height"));
+
+    // Update the position of the x-axis label
+    svg
+      .select(".x-label")
+      .attr("x", width / 2)
+      .attr("y", height - margin.bottom + 10);
+
+    // Update the viewBox of the SVG
+    svg.attr("viewBox", `0 0 ${width} ${height - 10}`);
+
+    // Update the scales
+    xScale.range([margin.left, width - margin.right]);
+    yScale.range([height - margin.bottom, margin.top]);
+
+    // Redraw the axes
+    svg
+      .select(".x-axis")
+      .attr("transform", `translate(0, ${height - margin.bottom})`)
+      .call(d3.axisBottom(xScale));
+
+    svg.select(".y-axis").call(d3.axisLeft(yScale));
+
+    // Update the positions of the circles
+    svg
+      .selectAll("circle")
+      .attr("cx", (d) => xScale(d.temperature))
+      .attr("cy", (d) => yScale(d.luminosity));
+
+    // Update the position of the headline
+    svg.select(".headline").attr("x", width / 2);
+
+    svg.select(".y-label").attr("x", -height / 2);
+
+    // Update the position of the x-axis label
+    svg
+      .select(".x-label")
+      .attr("x", width / 2)
+      .attr("y", height - margin.bottom + 30); // Adjust this value as needed
+
+    svg
+      .selectAll(".star-label") // Select only the star labels
+      .attr("x", (d) => xScale(d.temperature) + 10)
+      .attr("y", (d) => yScale(d.luminosity));
+  });
 });
