@@ -214,7 +214,7 @@ d3.json("stars.json").then(function (stars) {
       .attr("x", (d) => xScale(d.temperature) + 10)
       .attr("y", (d) => yScale(d.luminosity))
       .text((d) => d.name)
-      .style("font-size", "15px")
+      .style("font-size", "11px")
       .style("fill", "#fff")
       .style("text-shadow", "2px 2px 4px #000");
 
@@ -258,7 +258,7 @@ d3.json("stars.json").then(function (stars) {
     .attr("x", (d) => xScale(d.temperature) + 10)
     .attr("y", (d) => yScale(d.luminosity))
     .text((d) => d.name)
-    .style("font-size", "15px") // Increase the font size
+    .style("font-size", "11px") // Increase the font size
     .style("fill", "#fff") // Change the font color to white
     .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
   // Add x-axis

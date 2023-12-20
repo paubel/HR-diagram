@@ -383,5 +383,155 @@
     "apparentMagnitude": 3.99,
     "age": 500e6,
     "mass": 1.84
+  },
+  {
+    "name": "Eta Carinae A",
+    "temperature": 35000,
+    "luminosity": 4600000,
+    "spectralClass": "LBV",
+    "radius": 240,
+    "constellation": "Carina",
+    "distance": 7500,
+    "apparentMagnitude": 4.3,
+    "age": 3e6,
+    "mass": 100
+  },
+  {
+    "name": "Eta Carinae B",
+    "temperature": 37200,
+    "luminosity": 1000000,
+    "spectralClass": "O or WR",
+    "radius": 240,
+    "constellation": "Andromeda",
+    "distance": 7500,
+    "apparentMagnitude": 4.3,
+    "age": 3e6,
+    "mass": 50
+  },
+  {
+    "name": "Alpha Andromedae A",
+    "temperature": 13800,
+    "luminosity": 240,
+    "spectralClass": "B8IVpMnHg",
+    "radius": 2.7,
+    "constellation": "Andromeda",
+    "distance": 97,
+    "apparentMagnitude": 2.22,
+    "age": 60e6,
+    "mass": 3.8
+  },
+  {
+    "name": "Alpha Andromedae B",
+    "temperature": 8500,
+    "luminosity": 13,
+    "spectralClass": "A3V",
+    "radius": 1.65,
+    "constellation": "Andromeda",
+    "distance": 97,
+    "apparentMagnitude": 4.21,
+    "age": 70e6,
+    "mass": 1.85
+  },
+  {
+    "name": "Mirach",
+    "temperature": 3842,
+
+    "luminosity": 1995,
+    "spectralClass": "M0 III",
+    "radius": 100,
+    "constellation": "Andromeda",
+    "distance": 197,
+    "apparentMagnitude": 2.05,
+    "mass": 3.5
+  },
+  {
+    "name": "Almach A",
+    "temperature": 4500,
+    "luminosity": 2000,
+    "spectralClass": "K3IIb",
+    "radius": 80,
+    "constellation": "Andromeda",
+    "distance": 350,
+    "apparentMagnitude": 2.28
+  },
+  {
+    "name": "Hamal",
+    "temperature": 4480,
+    "luminosity": 91,
+    "spectralClass": "K1IIIb or K2-IIIbCa-1",
+    "radius": 14.9,
+    "constellation": "Aries",
+    "distance": 65.8,
+    "apparentMagnitude": 2.0
+  },
+  {
+    "name": "Schedar",
+    "temperature": 4530,
+    "luminosity": 676,
+    "spectralClass": "K0IIIa",
+    "radius": 42.1,
+    "constellation": "Cassiopeia",
+    "distance": 228,
+    "apparentMagnitude": 2.24
+  },
+  {
+    "name": "Caph",
+    "temperature": 7079,
+    "luminosity": 27.3,
+    "spectralClass": "F2 III",
+    "radius": 3.5,
+    "constellation": "Cassiopeia",
+    "distance": 54.7,
+    "apparentMagnitude": 2.28
+  },
+  {
+    "name": "Ruchbah",
+    "temperature": 7980,
+    "luminosity": 72.88,
+    "spectralClass": "A5 IV",
+    "radius": 3.9,
+    "constellation": "Cassiopeia",
+    "distance": 99.4,
+    "apparentMagnitude": 2.68
+  },
+  {
+    "name": "Segin",
+    "temperature": 15174,
+    "luminosity": 25008,
+    "spectralClass": "B3 V or B3 III",
+    "radius": 6,
+    "constellation": "Cassiopeia",
+    "distance": 410,
+    "apparentMagnitude": 3.37
+  },
+  {
+    "name": "Achird A",
+    "temperature": 5973,
+    "luminosity": 1.2321,
+    "spectralClass": "G0 V",
+    "radius": 1.0386,
+    "constellation": "Cassiopeia",
+    "distance": 19.32,
+    "apparentMagnitude": 3.44
+  },
+  {
+    "name": "Achird B",
+    "temperature": 4036,
+    "luminosity": 0.06,
+    "spectralClass": "K7 V",
+    "radius": 0.66,
+    "constellation": "Cassiopeia",
+    "distance": 19.32,
+    "apparentMagnitude": 7.51
+  },
+  {
+    "name": "Navi",
+    "temperature": 25000,
+    "luminosity": 34000,
+    "spectralClass": "B0.5IVe",
+    "radius": 10,
+    "constellation": "Cassiopeia",
+    "distance": 550,
+    "apparentMagnitude": 2.47
   }
 ]
