@@ -76,9 +76,14 @@ d3.json("stars.json").then(function (stars) {
     .selectAll("option")
     .data([
       "All",
+      "Closest Stars 10 ly",
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
-      "Brightest Stars",
+      "Brightest Stars from Earth",
+      "Stars bigger than 50 R⊙",
+      "Stars bigger than 10 R⊙",
+      "Stars bigger than 1 R⊙",
+      "Stars smaller than 1 R⊙",
     ])
     .enter()
     .append("option")
@@ -119,14 +124,29 @@ d3.json("stars.json").then(function (stars) {
     let filteredStars;
 
     switch (selectedOption) {
+      case "Closest Stars 10 ly":
+        filteredStars = stars.filter((star) => star.distance <= 10);
+        break;
       case "Closest Stars 100 ly":
         filteredStars = stars.filter((star) => star.distance <= 100);
         break;
       case "Closest Stars 1000 ly":
         filteredStars = stars.filter((star) => star.distance <= 1000);
         break;
-      case "Brightest Stars":
+      case "Brightest Stars from Earth":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
+        break;
+      case "Stars bigger than 50 R⊙":
+        filteredStars = stars.filter((star) => star.radius >= 50);
+        break;
+      case "Stars bigger than 10 R⊙":
+        filteredStars = stars.filter((star) => star.radius >= 10);
+        break;
+      case "Stars bigger than 1 R⊙":
+        filteredStars = stars.filter((star) => star.radius >= 1);
+        break;
+      case "Stars smaller than 1 R⊙":
+        filteredStars = stars.filter((star) => star.radius < 1);
         break;
       case "All":
         filteredStars = stars;
@@ -136,6 +156,7 @@ d3.json("stars.json").then(function (stars) {
           (star) => star.constellation === selectedOption
         );
     }
+
     // Update the visualization with the filtered stars
     let circles = svg.selectAll("circle").data(filteredStars, (d) => d.name);
     circles
