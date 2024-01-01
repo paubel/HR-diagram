@@ -15,3 +15,7 @@ git clone https://github.com/paubel/HR-diagram.git
 # Navigate into the project directory
 cd HR-diagram
 ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
