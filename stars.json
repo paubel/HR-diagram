@@ -71,7 +71,7 @@
     "constellation": "Orion",
     "distance": 1975.8,
     "apparentMagnitude": 1.69,
-    "age": 5.7e9,
+    "age": 5.7e6,
     "mass": 40
   },
   {
@@ -240,7 +240,7 @@
     "distance": 400,
     "apparentMagnitude": -1.77,
     "age": 115e6,
-    "mass": 5e6
+    "mass": 5.6
   },
 
   {
@@ -462,7 +462,9 @@
     "radius": 14.9,
     "constellation": "Aries",
     "distance": 65.8,
-    "apparentMagnitude": 2.0
+    "apparentMagnitude": 2.0,
+    "age": 3.4e9,
+    "mass": 1.5
   },
   {
     "name": "Schedar",
@@ -472,7 +474,9 @@
     "radius": 42.1,
     "constellation": "Cassiopeia",
     "distance": 228,
-    "apparentMagnitude": 2.24
+    "apparentMagnitude": 2.24,
+    "age": 150e6,
+    "mass": 4.5
   },
   {
     "name": "Caph",
@@ -482,7 +486,9 @@
     "radius": 3.5,
     "constellation": "Cassiopeia",
     "distance": 54.7,
-    "apparentMagnitude": 2.28
+    "apparentMagnitude": 2.28,
+    "age": 1.16e9,
+    "mass": 1.91
   },
   {
     "name": "Ruchbah",
@@ -492,17 +498,21 @@
     "radius": 3.9,
     "constellation": "Cassiopeia",
     "distance": 99.4,
-    "apparentMagnitude": 2.68
+    "apparentMagnitude": 2.68,
+    "age": 600e6,
+    "mass": 2.49
   },
   {
     "name": "Segin",
     "temperature": 15174,
-    "luminosity": 25008,
+    "luminosity": 2500,
     "spectralClass": "B3 V or B3 III",
     "radius": 6,
     "constellation": "Cassiopeia",
     "distance": 410,
-    "apparentMagnitude": 3.37
+    "apparentMagnitude": 3.37,
+    "age": 15.4e6,
+    "mass": 9.2
   },
   {
     "name": "Achird A",
@@ -512,7 +522,9 @@
     "radius": 1.0386,
     "constellation": "Cassiopeia",
     "distance": 19.32,
-    "apparentMagnitude": 3.44
+    "apparentMagnitude": 3.44,
+    "age": 5.4e9,
+    "mass": 0.57
   },
   {
     "name": "Achird B",
@@ -532,6 +544,65 @@
     "radius": 10,
     "constellation": "Cassiopeia",
     "distance": 550,
-    "apparentMagnitude": 2.47
+    "apparentMagnitude": 2.47,
+    "age": 8e6,
+    "mass": 13
+  },
+  {
+    "name": "Mirfak",
+    "temperature": 6350,
+    "luminosity": 5000,
+    "spectralClass": "F5 Ib",
+    "radius": 68,
+    "constellation": "Perseus",
+    "distance": 510,
+    "apparentMagnitude": 1.806,
+    "age": 41e6,
+    "mass": 8.5
+  },
+  {
+    "name": "Algol Aa1",
+    "temperature": 13000,
+    "luminosity": 182,
+    "spectralClass": "B8V",
+    "radius": 2.73,
+    "constellation": "Perseus",
+    "distance": 90,
+    "apparentMagnitude": 2.12,
+    "age": 570e6,
+    "mass": 3.17
+  },
+  {
+    "name": "Algol Aa2",
+    "temperature": 4500,
+    "luminosity": 6.92,
+    "spectralClass": "K0IV",
+    "radius": 3.48,
+    "constellation": "Perseus",
+    "distance": 90,
+    "apparentMagnitude": 2.12,
+    "mass": 0.7
+  },
+  {
+    "name": "Algol Ab",
+    "temperature": 7500,
+    "luminosity": 10,
+    "spectralClass": "A7m",
+    "radius": 1.73,
+    "constellation": "Perseus",
+    "distance": 90,
+    "apparentMagnitude": 2.12
+  },
+  {
+    "name": "Zeta Persei",
+    "temperature": 20800,
+    "luminosity": 47039,
+    "spectralClass": "B1 Ib",
+    "radius": 26,
+    "constellation": "Perseus",
+    "distance": 750,
+    "apparentMagnitude": 2.86,
+    "age": 12.6e6,
+    "mass": 14.5
   }
 ]

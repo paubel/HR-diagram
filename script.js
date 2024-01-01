@@ -79,11 +79,20 @@ d3.json("stars.json").then(function (stars) {
       "Closest Stars 10 ly",
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
-      "Brightest Stars from Earth",
-      "Stars bigger than 50 R⊙",
-      "Stars bigger than 10 R⊙",
-      "Stars bigger than 1 R⊙",
-      "Stars smaller than 1 R⊙",
+      "Brightest Stars app. mag. < 2",
+      "Bigger than 50 R⊙",
+      "Bigger than 10 R⊙",
+      "Bigger than 1 R⊙",
+      "Smaller than 1 R⊙",
+      "Younger than 10 Myr",
+      "Younger than 100 Myr",
+      "Younger than 1 Gyr",
+      "Older than 1 Gyr",
+      "Older than 10 Gyr",
+      "Mass > 100 M⊙",
+      "Mass > 10 M⊙",
+      "Mass > 1 M⊙",
+      "Mass < 1 M⊙",
     ])
     .enter()
     .append("option")
@@ -106,21 +115,6 @@ d3.json("stars.json").then(function (stars) {
     // Get the selected option
     const selectedOption = d3.select(this).property("value");
 
-    // Filter the stars based on the selected option
-    /*    let filteredStars;
-    if (selectedOption === "Closest Stars 100 ly") {
-      filteredStars = stars.filter((star) => star.distance <= 100);
-    } else if (selectedOption === "Closest Stars 1000 ly") {
-      filteredStars = stars.filter((star) => star.distance <= 1000);
-    } else if (selectedOption === "Brightest Stars") {
-      filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
-    } else {
-      filteredStars =
-        selectedOption === "All"
-          ? stars
-          : stars.filter((star) => star.constellation === selectedOption);
-    } */
-
     let filteredStars;
 
     switch (selectedOption) {
@@ -133,21 +127,50 @@ d3.json("stars.json").then(function (stars) {
       case "Closest Stars 1000 ly":
         filteredStars = stars.filter((star) => star.distance <= 1000);
         break;
-      case "Brightest Stars from Earth":
+      case "Brightest Stars app. mag. < 2":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
         break;
-      case "Stars bigger than 50 R⊙":
+      case "Bigger than 50 R⊙":
         filteredStars = stars.filter((star) => star.radius >= 50);
         break;
-      case "Stars bigger than 10 R⊙":
+      case "Bigger than 10 R⊙":
         filteredStars = stars.filter((star) => star.radius >= 10);
         break;
-      case "Stars bigger than 1 R⊙":
+      case "Bigger than 1 R⊙":
         filteredStars = stars.filter((star) => star.radius >= 1);
         break;
-      case "Stars smaller than 1 R⊙":
+      case "Smaller than 1 R⊙":
         filteredStars = stars.filter((star) => star.radius < 1);
         break;
+
+      case "Younger than 10 Myr":
+        filteredStars = stars.filter((star) => star.age <= 10000000);
+        break;
+      case "Younger than 100 Myr":
+        filteredStars = stars.filter((star) => star.age <= 100000000);
+        break;
+      case "Younger than 1 Gyr":
+        filteredStars = stars.filter((star) => star.age <= 1000000000);
+        break;
+      case "Older than 1 Gyr":
+        filteredStars = stars.filter((star) => star.age >= 1000000000);
+        break;
+      case "Older than 10 Gyr":
+        filteredStars = stars.filter((star) => star.age >= 10000000000);
+        break;
+      case "Mass > 100 M⊙":
+        filteredStars = stars.filter((star) => star.mass >= 100);
+        break;
+      case "Mass > 10 M⊙":
+        filteredStars = stars.filter((star) => star.mass >= 10);
+        break;
+      case "Mass > 1 M⊙":
+        filteredStars = stars.filter((star) => star.mass >= 1);
+        break;
+      case "Mass < 1 M⊙":
+        filteredStars = stars.filter((star) => star.mass < 1);
+        break;
+
       case "All":
         filteredStars = stars;
         break;
