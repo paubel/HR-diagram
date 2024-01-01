@@ -4,6 +4,8 @@ This project is a HR-diagram of stars using D3.js. It allows users to interactiv
 For more information on HR diagrams, you can visit the following site:
 [HR Diagram - Wikipedia](https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram)
 
+![HR Diagram](hr.png)
+
 ## Installation
 
 To get started with this project, follow these steps:
