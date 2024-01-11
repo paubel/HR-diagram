@@ -36,7 +36,7 @@ const yScale = d3
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
-const radiusScale = d3.scaleLog().domain([0.1, 100]).range([1, 15]);
+const radiusScale = d3.scaleLog().domain([0.1, 100]).range([0.1, 10]);
 
 // Color scale based on temperature (spectral class)
 let colors = [
@@ -79,7 +79,7 @@ d3.json("stars.json").then(function (stars) {
       "Closest Stars 10 ly",
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
-      "Brightest Stars app. mag. < 2",
+      "Bright Stars",
       "Bigger than 50 R⊙",
       "Bigger than 10 R⊙",
       "Bigger than 1 R⊙",
@@ -127,7 +127,7 @@ d3.json("stars.json").then(function (stars) {
       case "Closest Stars 1000 ly":
         filteredStars = stars.filter((star) => star.distance <= 1000);
         break;
-      case "Brightest Stars app. mag. < 2":
+      case "Bright Stars":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
         break;
       case "Bigger than 50 R⊙":
@@ -208,6 +208,7 @@ d3.json("stars.json").then(function (stars) {
         tooltip.style("display", "block");
         tooltip.html(`
         <strong>${d.name}</strong><br>
+        Constellation: ${d.constellation}<br>
         Temperature: ${d.temperature
           .toLocaleString("en-US", { useGrouping: true })
           .replace(/,/g, " ")} K <br>
@@ -223,6 +224,7 @@ d3.json("stars.json").then(function (stars) {
         Distance: ${d.distance
           .toLocaleString("en-US", { useGrouping: true })
           .replace(/,/g, " ")} ly<br>
+
         Age: ${
           d.age
             ? d.age
@@ -281,6 +283,16 @@ d3.json("stars.json").then(function (stars) {
     .style("font-size", "24px")
     .style("text-decoration", "none")
     .text("H-R Diagram");
+
+  // Add text about the number of stars
+  svg
+    .append("text")
+    .style("font-size", "10px")
+    .attr("class", "number-of-stars")
+    .attr("x", width / 2) // Set x to half of the width of the SVG
+    .attr("y", margin.top / 2 + 25)
+    .attr("text-anchor", "middle") // Center the text at the x position
+    .text(stars.length + " stars in database");
   // Create circles for stars on the HR diagram with radii based on the star size and colored by temperature
   svg
     .selectAll("circle")
@@ -347,6 +359,7 @@ d3.json("stars.json").then(function (stars) {
       tooltip.style("display", "block");
       tooltip.html(`
       <strong>${d.name}</strong><br>
+      Constellation: ${d.constellation}<br>
       Temperature: ${d.temperature
         .toLocaleString("en-US", { useGrouping: true })
         .replace(/,/g, " ")} K <br>
@@ -362,6 +375,7 @@ d3.json("stars.json").then(function (stars) {
       Distance: ${d.distance
         .toLocaleString("en-US", { useGrouping: true })
         .replace(/,/g, " ")} ly<br>
+    
       Age: ${
         d.age
           ? d.age
@@ -417,9 +431,9 @@ d3.json("stars.json").then(function (stars) {
       .attr("cx", (d) => xScale(d.temperature))
       .attr("cy", (d) => yScale(d.luminosity));
 
-    // Update the position of the headline
+    // Update the position of the headline and number of stars text
     svg.select(".headline").attr("x", width / 2);
-
+    svg.select(".number-of-stars").attr("x", width / 2);
     svg.select(".y-label").attr("x", -height / 2);
 
     // Update the position of the x-axis label

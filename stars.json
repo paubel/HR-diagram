@@ -652,5 +652,76 @@
     "apparentMagnitude": 3.42,
     "age": 1.6e6,
     "mass": 1.7
+  },
+  {
+    "name": "Capella Aa",
+    "temperature": 4970,
+    "luminosity": 78.7,
+    "spectralClass": "K0III",
+    "radius": 3.67,
+    "constellation": "Auriga",
+    "distance": 42.919,
+    "apparentMagnitude": 0.08,
+    "age": 620e6,
+    "mass": 2.5687
+  },
+  {
+    "name": "Capella Ab",
+    "temperature": 5730,
+    "luminosity": 72.7,
+    "spectralClass": "G1III",
+    "radius": 8.83,
+    "constellation": "Auriga",
+    "distance": 42.919,
+    "apparentMagnitude": 0.08,
+    "age": 620e6,
+    "mass": 2.4828
+  },
+  {
+    "name": "Capella H",
+    "temperature": 3700,
+    "luminosity": 0.05,
+    "spectralClass": "M2.5 V",
+    "radius": 0.54,
+    "constellation": "Auriga",
+    "distance": 43.48,
+    "apparentMagnitude": 10.16,
+    "mass": 0.57
+  },
+  {
+    "name": "Menkalinan A",
+    "temperature": 9350,
+    "luminosity": 48,
+    "spectralClass": "A1m IV",
+    "radius": 2.77,
+    "constellation": "Auriga",
+    "distance": 81.1,
+    "apparentMagnitude": 1.9,
+    "age": 560e6,
+    "mass": 2.389
+  },
+  {
+    "name": "Menkalinan B",
+    "temperature": 9200,
+    "luminosity": 48,
+    "spectralClass": "A1m IV or A1IV-Vp",
+    "radius": 2.63,
+    "constellation": "Auriga",
+    "distance": 81.1,
+    "apparentMagnitude": 1.9,
+    "age": null,
+    "mass": 2.327
+  },
+  {
+    "name": "Mahasim A",
+    "temperature": 10400,
+    "luminosity": 263,
+    "spectralClass": "A0pSi",
+    "radius": 5.1,
+    "constellation": "Auriga",
+    "distance": 166,
+    "apparentMagnitude": 2.62,
+    "age": 288e6,
+    "mass": 3.38
   }
 ]
