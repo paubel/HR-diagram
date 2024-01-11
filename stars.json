@@ -604,5 +604,53 @@
     "apparentMagnitude": 2.86,
     "age": 12.6e6,
     "mass": 14.5
+  },
+  {
+    "name": "Alpherg A",
+    "temperature": 4937,
+    "luminosity": 457,
+    "spectralClass": "G7 IIIa",
+    "radius": 26.48,
+    "constellation": "Pisces",
+    "distance": 350,
+    "apparentMagnitude": 3.611,
+    "age": 220e6,
+    "mass": 3.78
+  },
+  {
+    "name": "Aldebaran",
+    "temperature": 3910,
+    "luminosity": 425,
+    "spectralClass": "K5 III",
+    "radius": 44.2,
+    "constellation": "Taurus",
+    "distance": 65.3,
+    "apparentMagnitude": 0.8,
+    "age": 6.4e9,
+    "mass": 1.7
+  },
+  {
+    "name": "Elnath",
+    "temperature": 13800,
+    "luminosity": 700,
+    "spectralClass": "B7 III",
+    "radius": 4.2,
+    "constellation": "Taurus",
+    "distance": 134,
+    "apparentMagnitude": 1.65,
+    "age": 100000000,
+    "mass": 5
+  },
+  {
+    "name": "Mothallah",
+    "temperature": 6288,
+    "luminosity": 15.313,
+    "spectralClass": "F6 IV",
+    "radius": 3.67,
+    "constellation": "Triangulum",
+    "distance": 63.3,
+    "apparentMagnitude": 3.42,
+    "age": 1.6e6,
+    "mass": 1.7
   }
 ]
