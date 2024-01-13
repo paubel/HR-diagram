@@ -36,7 +36,7 @@ const yScale = d3
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
-const radiusScale = d3.scaleLog().domain([0.1, 100]).range([0.1, 10]);
+const radiusScale = d3.scaleLog().domain([0.005, 50]).range([0.1, 10]);
 
 // Color scale based on temperature (spectral class)
 let colors = [

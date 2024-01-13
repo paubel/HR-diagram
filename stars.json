@@ -783,5 +783,55 @@
     "apparentMagnitude": 3.55,
     "age": 2e9,
     "mass": 1.7
+  },
+  {
+    "name": "Asellus Australis",
+    "temperature": 4637,
+    "luminosity": 52,
+    "spectralClass": "K0 III",
+    "radius": 11,
+    "constellation": "Cancer",
+    "distance": 131,
+    "apparentMagnitude": 3.94,
+    "age": 2.45e9,
+    "mass": 1.71
+  },
+  {
+    "name": "Asellus Borealis",
+    "temperature": 9108,
+    "luminosity": 36,
+    "spectralClass": "A1IV",
+    "radius": 2.5,
+    "constellation": "Cancer",
+    "distance": 181,
+    "apparentMagnitude": 4.673,
+    "age": 171e6,
+    "mass": 2.18
+  },
+  {
+    "name": "Procyon A",
+    "temperature": 6530,
+    "luminosity": 6.93,
+    "spectralClass": "F5 IV–V",
+    "radius": 2.048,
+    "constellation": "Canis Minor",
+    "distance": 284.56,
+    "apparentMagnitude": 2.66,
+    "age": 1.87e9,
+    "mass": 1.499,
+    "type": "F-type main-sequence"
+  },
+  {
+    "name": "Procyon B",
+    "temperature": 7740,
+    "luminosity": 0.00049,
+    "spectralClass": "DQZ",
+    "radius": 0.01234,
+    "constellation": "Canis Minor",
+    "distance": 11.46,
+    "apparentMagnitude": 10.7,
+    "age": 1.37e9,
+    "mass": 0.602,
+    "type": "White dwarf"
   }
 ]
