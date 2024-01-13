@@ -723,5 +723,65 @@
     "apparentMagnitude": 2.62,
     "age": 288e6,
     "mass": 3.38
+  },
+  {
+    "name": "Hassaleh",
+    "temperature": 4160,
+    "luminosity": 4581,
+    "spectralClass": "K3 II",
+    "radius": 127,
+    "constellation": "Auriga",
+    "distance": 490,
+    "apparentMagnitude": 2.69,
+    "age": 39.8e6,
+    "mass": 7.1
+  },
+  {
+    "name": "Almaaz",
+    "temperature": 7750,
+    "luminosity": 37875,
+    "spectralClass": "F0 Iab (or II-III)",
+    "radius": 250,
+    "constellation": "Auriga",
+    "distance": 3300,
+    "apparentMagnitude": 3.4,
+    "age": null,
+    "mass": 7
+  },
+  {
+    "name": "Haedus",
+    "temperature": 17201,
+    "luminosity": 955,
+    "spectralClass": "B3 V",
+    "radius": 3.25,
+    "constellation": "Auriga",
+    "distance": 243,
+    "apparentMagnitude": 3.18,
+    "age": 38e6,
+    "mass": 5.4
+  },
+  {
+    "name": "Beta Camelopardalis",
+    "temperature": 5300,
+    "luminosity": 1592,
+    "spectralClass": "G1Ib–IIa",
+    "radius": 58,
+    "constellation": "Camelopardalis",
+    "distance": 870,
+    "apparentMagnitude": 4.02,
+    "age": 53e6,
+    "mass": 6.5
+  },
+  {
+    "name": "Tarf",
+    "temperature": 4092.1,
+    "luminosity": 794,
+    "spectralClass": "K4III Ba1",
+    "radius": 47.2,
+    "constellation": "Cancer",
+    "distance": 290,
+    "apparentMagnitude": 3.55,
+    "age": 2e9,
+    "mass": 1.7
   }
 ]
