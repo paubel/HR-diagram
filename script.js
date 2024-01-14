@@ -36,7 +36,7 @@ const yScale = d3
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
-const radiusScale = d3.scaleLog().domain([0.005, 50]).range([0.1, 10]);
+const radiusScale = d3.scaleLog().domain([0.005, 100]).range([0.1, 10]);
 
 // Color scale based on temperature (spectral class)
 let colors = [
@@ -76,6 +76,20 @@ d3.json("stars.json").then(function (stars) {
     .selectAll("option")
     .data([
       "All",
+      "Hypergiants",
+      "Supergiants",
+      "Giants",
+      "Subgiants",
+      "Main Sequence",
+      "White Dwarfs",
+      "Red Dwarfs",
+      "O stars",
+      "B stars",
+      "A stars",
+      "F stars",
+      "G stars",
+      "K stars",
+      "M stars",
       "Closest Stars 10 ly",
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
@@ -118,6 +132,63 @@ d3.json("stars.json").then(function (stars) {
     let filteredStars;
 
     switch (selectedOption) {
+      case "Hypergiants":
+        filteredStars = stars.filter((star) => star.type == "hypergiant");
+        break;
+      case "Supergiants":
+        filteredStars = stars.filter((star) => star.type == "supergiant");
+        break;
+      case "Giants":
+        filteredStars = stars.filter((star) => star.type == "giant");
+        break;
+      case "Subgiants":
+        filteredStars = stars.filter((star) => star.type == "subgiant");
+        break;
+      case "Main Sequence":
+        filteredStars = stars.filter((star) => star.type == "main sequence");
+        break;
+      case "White Dwarfs":
+        filteredStars = stars.filter((star) => star.type == "white dwarf");
+        break;
+      case "Red Dwarfs":
+        filteredStars = stars.filter((star) => star.type == "red dwarf");
+        break;
+      case "O stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "O"
+        );
+        break;
+      case "B stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "B"
+        );
+        break;
+      case "A stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "A"
+        );
+        break;
+      case "F stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "F"
+        );
+        break;
+      case "G stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "G"
+        );
+        break;
+      case "K stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "K"
+        );
+        break;
+      case "M stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "M"
+        );
+        break;
+
       case "Closest Stars 10 ly":
         filteredStars = stars.filter((star) => star.distance <= 10);
         break;
@@ -142,7 +213,6 @@ d3.json("stars.json").then(function (stars) {
       case "Smaller than 1 R⊙":
         filteredStars = stars.filter((star) => star.radius < 1);
         break;
-
       case "Younger than 10 Myr":
         filteredStars = stars.filter((star) => star.age <= 10000000);
         break;
@@ -170,7 +240,6 @@ d3.json("stars.json").then(function (stars) {
       case "Mass < 1 M⊙":
         filteredStars = stars.filter((star) => star.mass < 1);
         break;
-
       case "All":
         filteredStars = stars;
         break;

@@ -9,7 +9,8 @@
     "distance": 0,
     "apparentMagnitude": -26.74,
     "age": 4.603e9,
-    "mass": 1
+    "mass": 1,
+    "type": "main sequence"
   },
   {
     "name": "Alpha Centauri A",
@@ -22,10 +23,11 @@
     "distance": 4.367,
     "apparentMagnitude": -0.27,
     "age": 5.2e9,
-    "mass": 1.1
+    "mass": 1.1,
+    "type": "main sequence"
   },
   {
-    "name": "Alpha Centauri B",
+    "name": "Alpha Centauri B - Toliman",
     "hemisphere": "S",
     "temperature": 5242,
     "luminosity": 0.5002,
@@ -35,7 +37,8 @@
     "distance": 4.367,
     "apparentMagnitude": 1.33,
     "age": 5.3e9,
-    "mass": 0.907
+    "mass": 0.907,
+    "type": "main sequence"
   },
   {
     "name": "Proxima Centauri",
@@ -48,7 +51,8 @@
     "distance": 4.246,
     "apparentMagnitude": 11.05,
     "age": 4.853e9,
-    "mass": 0.123
+    "mass": 0.123,
+    "type": "red dwarf"
   },
   {
     "name": "Star Tau Ceti",
@@ -60,7 +64,8 @@
     "distance": 11.912,
     "apparentMagnitude": 3.5,
     "age": 10e9,
-    "mass": 0.69
+    "mass": 0.69,
+    "type": "main sequence"
   },
   {
     "name": "Alnilam",
@@ -72,7 +77,8 @@
     "distance": 1975.8,
     "apparentMagnitude": 1.69,
     "age": 5.7e6,
-    "mass": 40
+    "mass": 40,
+    "type": "supergiant"
   },
   {
     "name": "Alnitak (Aa)",
@@ -84,7 +90,8 @@
     "distance": 1260,
     "apparentMagnitude": 2.08,
     "age": 6.4e6,
-    "mass": 33
+    "mass": 33,
+    "type": "supergiant"
   },
   {
     "name": "Alnitak (Ab)",
@@ -96,7 +103,8 @@
     "distance": 1260,
     "apparentMagnitude": 4.28,
     "age": 7.2e6,
-    "mass": 14
+    "mass": 14,
+    "type": "supergiant"
   },
 
   {
@@ -109,19 +117,22 @@
     "distance": 250,
     "apparentMagnitude": -2.78,
     "age": 25.2e6,
-    "mass": 5.75
+    "mass": 5.75,
+    "type": "giant"
   },
   {
     "name": "Betelgeuse",
     "temperature": 3600,
     "luminosity": 126000,
     "spectralClass": "M1–M2 Ia–ab",
+    "stellarClass": "M",
     "radius": 764,
     "constellation": "Orion",
     "distance": 548,
     "apparentMagnitude": 0.5,
     "age": 8e6,
-    "mass": 17
+    "mass": 17,
+    "type": "supergiant"
   },
   {
     "name": "Hatysa (Aa1)",
@@ -133,7 +144,8 @@
     "distance": 1240,
     "apparentMagnitude": 2.77,
     "age": 4e6,
-    "mass": 13.1
+    "mass": 13.1,
+    "type": "giant"
   },
   {
     "name": "Hatysa (Aa2)",
@@ -145,7 +157,8 @@
     "distance": 716.2,
     "apparentMagnitude": 2.77,
     "age": 3e6,
-    "mass": 5.12
+    "mass": 5.12,
+    "type": "giant"
   },
   {
     "name": "Mintaka (Aa1)",
@@ -156,7 +169,8 @@
     "constellation": "Orion",
     "distance": 1200,
     "apparentMagnitude": 2.5,
-    "mass": 24
+    "mass": 24,
+    "type": "giant"
   },
   {
     "name": "Mintaka (Aa2)",
@@ -167,7 +181,8 @@
     "constellation": "Orion",
     "distance": 1200,
     "apparentMagnitude": 3.9,
-    "mass": 22.5
+    "mass": 22.5,
+    "type": "main sequence"
   },
   {
     "name": "Mintaka (Ab)",
@@ -178,7 +193,8 @@
     "constellation": "Orion",
     "distance": 1200,
     "apparentMagnitude": 14,
-    "mass": 22.5
+    "mass": 22.5,
+    "type": "subgiant"
   },
   {
     "name": "Mintaka (HD 36485)",
@@ -189,7 +205,8 @@
     "constellation": "Orion",
     "distance": 1200,
     "apparentMagnitude": 6.85,
-    "mass": 9
+    "mass": 9,
+    "type": "main sequence"
   },
   {
     "name": "Rigel (A)",
@@ -201,7 +218,8 @@
     "distance": 860,
     "apparentMagnitude": 0.13,
     "age": 8e6,
-    "mass": 21
+    "mass": 21,
+    "type": "supergiant"
   },
 
   {
@@ -214,7 +232,8 @@
     "distance": 650,
     "apparentMagnitude": 2.09,
     "age": 11.1e6,
-    "mass": 15.5
+    "mass": 15.5,
+    "type": "supergiant"
   },
 
   {
@@ -227,7 +246,8 @@
     "distance": 2000,
     "apparentMagnitude": 1.25,
     "age": 11.1e6,
-    "mass": 19
+    "mass": 19,
+    "type": "supergiant"
   },
 
   {
@@ -240,7 +260,8 @@
     "distance": 400,
     "apparentMagnitude": -1.77,
     "age": 115e6,
-    "mass": 5.6
+    "mass": 5.6,
+    "type": "giant"
   },
 
   {
@@ -253,7 +274,8 @@
     "distance": 10e9,
     "apparentMagnitude": 9.5,
     "age": 10e9,
-    "mass": 5
+    "mass": 5,
+    "type": "red dwarf"
   },
   {
     "name": "Acamar - Theta¹ Eridani",
@@ -264,7 +286,8 @@
     "constellation": "Eridanus",
     "distance": 167,
     "apparentMagnitude": 2.91,
-    "mass": 2.6
+    "mass": 2.6,
+    "type": "giant"
   },
   {
     "name": "Acamar - Theta² Eridani",
@@ -276,7 +299,8 @@
     "distance": 167,
     "apparentMagnitude": 4.119,
     "age": 10e9,
-    "mass": 2.4
+    "mass": 2.4,
+    "type": "giant"
   },
   {
     "name": "Dubhe A",
@@ -288,7 +312,8 @@
     "distance": 123,
     "apparentMagnitude": 1.79,
     "age": 280e6,
-    "mass": 4.25
+    "mass": 4.25,
+    "type": "giant"
   },
   {
     "name": "Phecda",
@@ -300,7 +325,8 @@
     "distance": 83.2,
     "apparentMagnitude": 2.438,
     "age": 300e6,
-    "mass": 2.94
+    "mass": 2.94,
+    "type": "main sequence"
   },
   {
     "name": "Merak",
@@ -312,7 +338,8 @@
     "distance": 79.7,
     "apparentMagnitude": 2.37,
     "age": 500e6,
-    "mass": 2.7
+    "mass": 2.7,
+    "type": "subgiant"
   },
   {
     "name": "Megrez",
@@ -324,7 +351,8 @@
     "distance": 80.5,
     "apparentMagnitude": 3.312,
     "age": 300e6,
-    "mass": 1.63
+    "mass": 1.63,
+    "type": "main sequence"
   },
   {
     "name": "Mizar Aa",
@@ -336,7 +364,8 @@
     "distance": 82.9,
     "apparentMagnitude": 2.04,
     "age": 370e6,
-    "mass": 2.2224
+    "mass": 2.2224,
+    "type": "main sequence"
   },
   {
     "name": "Mizar Ab",
@@ -348,7 +377,8 @@
     "distance": 82.9,
     "apparentMagnitude": 2.04,
     "age": 370e6,
-    "mass": 2.2381
+    "mass": 2.2381,
+    "type": "main sequence"
   },
   {
     "name": "Mizar Ba",
@@ -358,7 +388,8 @@
     "radius": 2.08,
     "constellation": "Ursa Major",
     "distance": 80.53,
-    "apparentMagnitude": 2.04
+    "apparentMagnitude": 2.04,
+    "type": "main sequence"
   },
   {
     "name": "Alkaid",
@@ -370,7 +401,8 @@
     "distance": 103.9,
     "apparentMagnitude": 1.86,
     "age": 10e6,
-    "mass": 6.1
+    "mass": 6.1,
+    "type": "main sequence"
   },
   {
     "name": "Alcor A",
@@ -382,7 +414,8 @@
     "distance": 81.7,
     "apparentMagnitude": 3.99,
     "age": 500e6,
-    "mass": 1.84
+    "mass": 1.84,
+    "type": "main sequence"
   },
   {
     "name": "Eta Carinae A",
@@ -394,7 +427,8 @@
     "distance": 7500,
     "apparentMagnitude": 4.3,
     "age": 3e6,
-    "mass": 100
+    "mass": 100,
+    "type": "hypergiant"
   },
   {
     "name": "Eta Carinae B",
@@ -406,7 +440,8 @@
     "distance": 7500,
     "apparentMagnitude": 4.3,
     "age": 3e6,
-    "mass": 50
+    "mass": 50,
+    "type": "supergiant"
   },
   {
     "name": "Alpha Andromedae A",
@@ -819,7 +854,7 @@
     "apparentMagnitude": 2.66,
     "age": 1.87e9,
     "mass": 1.499,
-    "type": "F-type main-sequence"
+    "type": "main sequence"
   },
   {
     "name": "Procyon B",
@@ -832,6 +867,32 @@
     "apparentMagnitude": 10.7,
     "age": 1.37e9,
     "mass": 0.602,
-    "type": "White dwarf"
+    "type": "white dwarf"
+  },
+  {
+    "name": "Gomeisa",
+    "temperature": 11772,
+    "luminosity": 195,
+    "spectralClass": "B8 Ve",
+    "radius": 3.5,
+    "constellation": "Canis Minor",
+    "distance": 160,
+    "apparentMagnitude": 2.89,
+    "age": 160e6,
+    "mass": 3.5,
+    "type": "main sequence"
+  },
+  {
+    "name": "VY Canis Majoris",
+    "temperature": 3490,
+    "luminosity": 270000,
+    "spectralClass": "M3–M4.5",
+    "radius": 1420,
+    "constellation": "Canis Major",
+    "distance": 3820,
+    "apparentMagnitude": 7.95,
+    "age": 8.2e6,
+    "mass": 17,
+    "type": "hypergiant"
   }
 ]
