@@ -453,7 +453,8 @@
     "distance": 97,
     "apparentMagnitude": 2.22,
     "age": 60e6,
-    "mass": 3.8
+    "mass": 3.8,
+    "type": "subgiant"
   },
   {
     "name": "Alpha Andromedae B",
@@ -465,7 +466,8 @@
     "distance": 97,
     "apparentMagnitude": 4.21,
     "age": 70e6,
-    "mass": 1.85
+    "mass": 1.85,
+    "type": "main sequence"
   },
   {
     "name": "Mirach",
@@ -477,7 +479,8 @@
     "constellation": "Andromeda",
     "distance": 197,
     "apparentMagnitude": 2.05,
-    "mass": 3.5
+    "mass": 3.5,
+    "type": "giant"
   },
   {
     "name": "Almach A",
@@ -487,7 +490,10 @@
     "radius": 80,
     "constellation": "Andromeda",
     "distance": 350,
-    "apparentMagnitude": 2.28
+    "apparentMagnitude": 2.28,
+    "age": null,
+    "mass": null,
+    "type": "giant"
   },
   {
     "name": "Hamal",
@@ -499,7 +505,8 @@
     "distance": 65.8,
     "apparentMagnitude": 2.0,
     "age": 3.4e9,
-    "mass": 1.5
+    "mass": 1.5,
+    "type": "giant"
   },
   {
     "name": "Schedar",
@@ -511,7 +518,8 @@
     "distance": 228,
     "apparentMagnitude": 2.24,
     "age": 150e6,
-    "mass": 4.5
+    "mass": 4.5,
+    "type": "giant"
   },
   {
     "name": "Caph",
@@ -523,7 +531,8 @@
     "distance": 54.7,
     "apparentMagnitude": 2.28,
     "age": 1.16e9,
-    "mass": 1.91
+    "mass": 1.91,
+    "type": "giant"
   },
   {
     "name": "Ruchbah",
@@ -535,7 +544,8 @@
     "distance": 99.4,
     "apparentMagnitude": 2.68,
     "age": 600e6,
-    "mass": 2.49
+    "mass": 2.49,
+    "type": "subgiant"
   },
   {
     "name": "Segin",
@@ -547,7 +557,8 @@
     "distance": 410,
     "apparentMagnitude": 3.37,
     "age": 15.4e6,
-    "mass": 9.2
+    "mass": 9.2,
+    "type": "giant"
   },
   {
     "name": "Achird A",
@@ -559,7 +570,8 @@
     "distance": 19.32,
     "apparentMagnitude": 3.44,
     "age": 5.4e9,
-    "mass": 0.57
+    "mass": 0.57,
+    "type": "main sequence"
   },
   {
     "name": "Achird B",
@@ -569,7 +581,8 @@
     "radius": 0.66,
     "constellation": "Cassiopeia",
     "distance": 19.32,
-    "apparentMagnitude": 7.51
+    "apparentMagnitude": 7.51,
+    "type": "main sequence"
   },
   {
     "name": "Navi",
@@ -581,7 +594,8 @@
     "distance": 550,
     "apparentMagnitude": 2.47,
     "age": 8e6,
-    "mass": 13
+    "mass": 13,
+    "type": "main sequence"
   },
   {
     "name": "Mirfak",
@@ -593,7 +607,8 @@
     "distance": 510,
     "apparentMagnitude": 1.806,
     "age": 41e6,
-    "mass": 8.5
+    "mass": 8.5,
+    "type": "supergiant"
   },
   {
     "name": "Algol Aa1",
@@ -605,7 +620,8 @@
     "distance": 90,
     "apparentMagnitude": 2.12,
     "age": 570e6,
-    "mass": 3.17
+    "mass": 3.17,
+    "type": "main sequence"
   },
   {
     "name": "Algol Aa2",
@@ -616,7 +632,8 @@
     "constellation": "Perseus",
     "distance": 90,
     "apparentMagnitude": 2.12,
-    "mass": 0.7
+    "mass": 0.7,
+    "type": "subgiant"
   },
   {
     "name": "Algol Ab",
@@ -626,7 +643,10 @@
     "radius": 1.73,
     "constellation": "Perseus",
     "distance": 90,
-    "apparentMagnitude": 2.12
+    "apparentMagnitude": 2.12,
+    "age": null,
+    "mass": null,
+    "type": "main sequence"
   },
   {
     "name": "Zeta Persei",
@@ -650,7 +670,8 @@
     "distance": 350,
     "apparentMagnitude": 3.611,
     "age": 220e6,
-    "mass": 3.78
+    "mass": 3.78,
+    "type": "supergiant"
   },
   {
     "name": "Aldebaran",
@@ -662,7 +683,8 @@
     "distance": 65.3,
     "apparentMagnitude": 0.8,
     "age": 6.4e9,
-    "mass": 1.7
+    "mass": 1.7,
+    "type": "giant"
   },
   {
     "name": "Elnath",
@@ -674,7 +696,8 @@
     "distance": 134,
     "apparentMagnitude": 1.65,
     "age": 100000000,
-    "mass": 5
+    "mass": 5,
+    "type": "giant"
   },
   {
     "name": "Mothallah",
@@ -686,7 +709,8 @@
     "distance": 63.3,
     "apparentMagnitude": 3.42,
     "age": 1.6e6,
-    "mass": 1.7
+    "mass": 1.7,
+    "type": "subgiant"
   },
   {
     "name": "Capella Aa",
@@ -698,7 +722,8 @@
     "distance": 42.919,
     "apparentMagnitude": 0.08,
     "age": 620e6,
-    "mass": 2.5687
+    "mass": 2.5687,
+    "type": "giant"
   },
   {
     "name": "Capella Ab",
@@ -710,7 +735,8 @@
     "distance": 42.919,
     "apparentMagnitude": 0.08,
     "age": 620e6,
-    "mass": 2.4828
+    "mass": 2.4828,
+    "type": "giant"
   },
   {
     "name": "Capella H",
@@ -721,7 +747,8 @@
     "constellation": "Auriga",
     "distance": 43.48,
     "apparentMagnitude": 10.16,
-    "mass": 0.57
+    "mass": 0.57,
+    "type": "red dwarf"
   },
   {
     "name": "Menkalinan A",
@@ -733,7 +760,8 @@
     "distance": 81.1,
     "apparentMagnitude": 1.9,
     "age": 560e6,
-    "mass": 2.389
+    "mass": 2.389,
+    "type": "subgiant"
   },
   {
     "name": "Menkalinan B",
@@ -745,7 +773,8 @@
     "distance": 81.1,
     "apparentMagnitude": 1.9,
     "age": null,
-    "mass": 2.327
+    "mass": 2.327,
+    "type": "subgiant"
   },
   {
     "name": "Mahasim A",
@@ -757,7 +786,8 @@
     "distance": 166,
     "apparentMagnitude": 2.62,
     "age": 288e6,
-    "mass": 3.38
+    "mass": 3.38,
+    "type": "main sequence"
   },
   {
     "name": "Hassaleh",
@@ -769,7 +799,8 @@
     "distance": 490,
     "apparentMagnitude": 2.69,
     "age": 39.8e6,
-    "mass": 7.1
+    "mass": 7.1,
+    "type": "giant"
   },
   {
     "name": "Almaaz",
@@ -781,7 +812,8 @@
     "distance": 3300,
     "apparentMagnitude": 3.4,
     "age": null,
-    "mass": 7
+    "mass": 7,
+    "type": "supergiant"
   },
   {
     "name": "Haedus",
@@ -793,7 +825,8 @@
     "distance": 243,
     "apparentMagnitude": 3.18,
     "age": 38e6,
-    "mass": 5.4
+    "mass": 5.4,
+    "type": "main sequence"
   },
   {
     "name": "Beta Camelopardalis",
@@ -805,7 +838,8 @@
     "distance": 870,
     "apparentMagnitude": 4.02,
     "age": 53e6,
-    "mass": 6.5
+    "mass": 6.5,
+    "type": "supergiant"
   },
   {
     "name": "Tarf",
@@ -817,7 +851,8 @@
     "distance": 290,
     "apparentMagnitude": 3.55,
     "age": 2e9,
-    "mass": 1.7
+    "mass": 1.7,
+    "type": "giant"
   },
   {
     "name": "Asellus Australis",
@@ -829,7 +864,8 @@
     "distance": 131,
     "apparentMagnitude": 3.94,
     "age": 2.45e9,
-    "mass": 1.71
+    "mass": 1.71,
+    "type": "giant"
   },
   {
     "name": "Asellus Borealis",
@@ -841,7 +877,8 @@
     "distance": 181,
     "apparentMagnitude": 4.673,
     "age": 171e6,
-    "mass": 2.18
+    "mass": 2.18,
+    "type": "subgiant"
   },
   {
     "name": "Procyon A",
@@ -882,6 +919,7 @@
     "mass": 3.5,
     "type": "main sequence"
   },
+
   {
     "name": "VY Canis Majoris",
     "temperature": 3490,
