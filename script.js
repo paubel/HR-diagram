@@ -93,6 +93,7 @@ d3.json("stars.json").then(function (stars) {
       "Closest Stars 10 ly",
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
+      "Farthest Stars 1000 ly",
       "Bright Stars",
       "Bigger than 50 R⊙",
       "Bigger than 10 R⊙",
@@ -197,6 +198,9 @@ d3.json("stars.json").then(function (stars) {
         break;
       case "Closest Stars 1000 ly":
         filteredStars = stars.filter((star) => star.distance <= 1000);
+        break;
+      case "Farthest Stars 1000 ly":
+        filteredStars = stars.filter((star) => star.distance >= 1000);
         break;
       case "Bright Stars":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
