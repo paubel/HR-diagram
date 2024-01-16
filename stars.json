@@ -671,7 +671,7 @@
     "apparentMagnitude": 3.611,
     "age": 220e6,
     "mass": 3.78,
-    "type": "supergiant"
+    "type": "giant"
   },
   {
     "name": "Aldebaran",
@@ -1023,5 +1023,70 @@
     "age": null,
     "mass": 2.1,
     "type": "giant"
+  },
+  {
+    "name": "Propus Aa",
+    "temperature": 3502,
+    "luminosity": 10276,
+    "spectralClass": "M2 IIIa",
+    "radius": 275,
+    "constellation": "Gemini",
+    "distance": 700,
+    "apparentMagnitude": 3.5,
+    "age": 0.81e9,
+    "mass": 2.5,
+    "type": "giant"
+  },
+  {
+    "name": "Wasat",
+    "temperature": 6900,
+    "luminosity": 10147,
+    "spectralClass": "F0 IV",
+    "radius": 2.67,
+    "constellation": "Gemini",
+    "distance": 60.5,
+    "apparentMagnitude": 1.95,
+    "age": 1.6e9,
+    "mass": 1.57,
+    "type": "subgiant"
+  },
+  {
+    "name": "Regulus A",
+    "temperature": 11668,
+    "luminosity": 316.2,
+    "spectralClass": "B8 IVn",
+    "radius": 4.35,
+    "constellation": "Leo",
+    "distance": 79.3,
+    "apparentMagnitude": 1.4,
+    "age": 1e9,
+    "mass": 3.8,
+    "type": "subgiant"
+  },
+  {
+    "name": "Regulus B",
+    "temperature": 4885,
+    "luminosity": 0.5,
+    "spectralClass": "K2 V",
+    "radius": 0.83,
+    "constellation": "Leo",
+    "distance": 79.3,
+    "apparentMagnitude": 8.13,
+    "age": null,
+    "mass": 0.8,
+    "type": "main sequence"
+  },
+  {
+    "name": "Denebola",
+    "temperature": 8500,
+    "luminosity": 15,
+    "spectralClass": "A3Va",
+    "radius": 1.728,
+    "constellation": "Leo",
+    "distance": 35.9,
+    "apparentMagnitude": 2.113,
+    "age": 250e6,
+    "mass": 1.78,
+    "type": "main sequence"
   }
 ]
