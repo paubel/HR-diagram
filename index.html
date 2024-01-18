@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENJC0Q5525"></script>
     <script>
@@ -12,6 +11,8 @@
 
         gtag('config', 'G-ENJC0Q5525');
     </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HR-diagram - interactive - Paul Belfrage</title>
     <meta name="description"
         content="This project is a HR-diagram of stars using D3.js. It allows users to interactively explore various properties of stars such as temperature, luminosity, radius, and more. Users can hover over individual stars to see detailed information and can also adjust the size of the stars using a dropdown menu.">
@@ -22,7 +23,7 @@
 
 <body>
     <!--     <div id="hr-diagram-container"></div> -->
-    <label for="dropdown">Constellation / Bright / Closest </label>
+    <label for="dropdown">Select</label>
     <select id="dropdown"></select>
 
 
@@ -30,5 +31,6 @@
     <script src="script.js"></script>
 
 </body>
+<!-- https://codeshack.io/json-sorter/ -->
 
 </html>

@@ -59,7 +59,7 @@ let temps = [
 
 let colorScale = d3.scaleLinear().domain(temps).range(colors);
 
-d3.json("stars.json").then(function (stars) {
+d3.json("stars-sort.json").then(function (stars) {
   // Filter the stars to only include stars with a constellation
   const starsWithConstellation = stars.filter((star) => star.constellation);
 

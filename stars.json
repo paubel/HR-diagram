@@ -1088,5 +1088,31 @@
     "age": 250e6,
     "mass": 1.78,
     "type": "main sequence"
+  },
+  {
+    "name": "Algieba (Gamma 1 Leonis)",
+    "temperature": 4470,
+    "luminosity": 320,
+    "spectralClass": "K1 III",
+    "radius": 31.88,
+    "constellation": "Leo",
+    "distance": 130,
+    "apparentMagnitude": 2.366,
+    "age": null,
+    "mass": 1.23,
+    "type": "giant"
+  },
+  {
+    "name": "Algieba (Gamma 2 Leonis)",
+    "temperature": 4980,
+    "luminosity": 72,
+    "spectralClass": "G7 IIIb",
+    "radius": 12,
+    "constellation": "Leo",
+    "distance": 130,
+    "apparentMagnitude": 3.644,
+    "age": null,
+    "mass": 2.5,
+    "type": "giant"
   }
 ]
