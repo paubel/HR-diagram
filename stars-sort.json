@@ -1120,5 +1120,57 @@
     "age": 0.68e9,
     "mass": 2.2,
     "type": "subgiant"
+  },
+  {
+    "name": "Adhafera",
+    "temperature": 6792,
+    "luminosity": 85,
+    "spectralClass": "F0 III",
+    "radius": 6,
+    "constellation": "Leo",
+    "distance": 274,
+    "apparentMagnitude": 3.33,
+    "age": null,
+    "mass": 3,
+    "type": "giant"
+  },
+  {
+    "name": "Beta Leonis Minoris A",
+    "temperature": 4097,
+    "luminosity": 50.7,
+    "spectralClass": "G8III-IV",
+    "radius": 9.4,
+    "constellation": "Leo Minor",
+    "distance": 154,
+    "apparentMagnitude": 4.4,
+    "age": 1.2e9,
+    "mass": 2.98,
+    "type": "giant"
+  },
+  {
+    "name": "Beta Leonis Minoris B",
+    "temperature": 5211,
+    "luminosity": 9.1,
+    "spectralClass": "F8IV",
+    "radius": 3.7,
+    "constellation": "Leo Minor",
+    "distance": 154,
+    "apparentMagnitude": 6.12,
+    "age": null,
+    "mass": 1.92,
+    "type": "subgiant"
+  },
+  {
+    "name": "Alpha Lyncis",
+    "temperature": 3882,
+    "luminosity": 673,
+    "spectralClass": "K7 III",
+    "radius": 54.5,
+    "constellation": "Lynx",
+    "distance": 203,
+    "apparentMagnitude": 3.14,
+    "age": 1.4e9,
+    "mass": 2,
+    "type": "giant"
   }
 ]
