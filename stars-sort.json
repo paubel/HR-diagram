@@ -567,7 +567,7 @@
     "apparentMagnitude": 1.14,
     "age": 724000000,
     "mass": 1.91,
-    "type": "main sequence"
+    "type": "giant"
   },
   {
     "name": "Alhena",
@@ -611,7 +611,7 @@
   {
     "name": "Wasat",
     "temperature": 6900,
-    "luminosity": 10147,
+    "luminosity": 10.147,
     "spectralClass": "F0 IV",
     "radius": 2.67,
     "constellation": "Gemini",
@@ -913,7 +913,8 @@
     "distance": 750,
     "apparentMagnitude": 2.86,
     "age": 12600000,
-    "mass": 14.5
+    "mass": 14.5,
+    "type": "supergiant"
   },
   {
     "name": "Alpherg A",
@@ -1171,6 +1172,110 @@
     "apparentMagnitude": 3.14,
     "age": 1.4e9,
     "mass": 2,
+    "type": "giant"
+  },
+  {
+    "name": "Alpha Monocerotis",
+    "temperature": 4879,
+    "luminosity": 63.7,
+    "spectralClass": "G9.5 III-IIIb Fe-0.5",
+    "radius": 10.1,
+    "constellation": "Monoceros",
+    "distance": 148,
+    "apparentMagnitude": 3.94,
+    "age": 1.18e9,
+    "mass": 2.02,
+    "type": "giant"
+  },
+  {
+    "name": "Arcturus",
+    "temperature": 4286,
+    "luminosity": 170,
+    "spectralClass": "K1.5 III Fe−0.5",
+    "radius": 25.4,
+    "constellation": "Boötes",
+    "distance": 36.7,
+    "apparentMagnitude": -0.05,
+    "age": 7.1,
+    "mass": 1.08,
+    "type": "giant"
+  },
+  {
+    "name": "Alkalurops Aa",
+    "temperature": 7000,
+    "luminosity": 20,
+    "spectralClass": "F2IV",
+    "radius": 1.9,
+    "constellation": "Boötes",
+    "distance": 119.81,
+    "apparentMagnitude": 4.31,
+    "age": null,
+    "mass": 1.6,
+    "type": "subgiant"
+  },
+  {
+    "name": "Alkalurops Ba",
+    "temperature": 6000,
+    "luminosity": 1.75,
+    "spectralClass": "F9V",
+    "radius": 1.23,
+    "constellation": "Boötes",
+    "distance": 119.81,
+    "apparentMagnitude": 6.5,
+    "age": 5.6e9,
+    "mass": 1.05,
+    "type": "main sequence"
+  },
+  {
+    "name": "Alkalurops Bb",
+    "temperature": 5900,
+    "luminosity": 1.06,
+    "spectralClass": "G0V",
+    "radius": 1.09,
+    "constellation": "Boötes",
+    "distance": 119.81,
+    "apparentMagnitude": 8.7,
+    "age": 11.3e9,
+    "mass": 1.05,
+    "type": "main sequence"
+  },
+  {
+    "name": "Izar A",
+    "temperature": 4550,
+    "luminosity": 501,
+    "spectralClass": "K0",
+    "radius": 33,
+    "constellation": "Boötes",
+    "distance": 236,
+    "apparentMagnitude": 2.37,
+    "age": 37.4e9,
+    "mass": 4.6,
+    "type": "giant"
+  },
+  {
+    "name": "Izar B",
+    "temperature": 9009,
+    "luminosity": 44.8,
+    "spectralClass": "A2 V",
+    "radius": 2.7,
+    "constellation": "Boötes",
+    "distance": 236,
+    "apparentMagnitude": 5.12,
+    "age": null,
+    "mass": 2.27,
+    "type": "main sequence"
+  },
+  {
+    "name": "Seginus",
+    "temperature": 7800,
+    "luminosity": 34,
+    "spectralClass": "A7 III",
+    "radius": 3.5,
+    "constellation": "Boötes",
+    "distance": 86.8,
+    "apparentMagnitude": 3.03,
+    "age": null,
+    "mass": null,
     "type": "giant"
   }
 ]

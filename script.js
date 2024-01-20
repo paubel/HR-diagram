@@ -281,6 +281,7 @@ d3.json("stars-sort.json").then(function (stars) {
         tooltip.style("display", "block");
         tooltip.html(`
         <strong>${d.name}</strong><br>
+        Type: ${d.type}<br>
         Constellation: ${d.constellation}<br>
         Temperature: ${d.temperature
           .toLocaleString("en-US", { useGrouping: true })
@@ -432,6 +433,7 @@ d3.json("stars-sort.json").then(function (stars) {
       tooltip.style("display", "block");
       tooltip.html(`
       <strong>${d.name}</strong><br>
+      Type: ${d.type}<br>
       Constellation: ${d.constellation}<br>
       Temperature: ${d.temperature
         .toLocaleString("en-US", { useGrouping: true })
