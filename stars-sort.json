@@ -1497,7 +1497,7 @@
     "apparentMagnitude": 0.8,
     "age": 15e6,
     "mass": 12.5,
-    "type": "main sequence"
+    "type": "supergiant"
   },
   {
     "name": "Antares B",
@@ -1510,6 +1510,32 @@
     "apparentMagnitude": 5.5,
     "age": null,
     "mass": 7.2,
+    "type": "main sequence"
+  },
+  {
+    "name": "Spica A",
+    "temperature": 25300,
+    "luminosity": 20512,
+    "spectralClass": "B1III-IV",
+    "radius": 7.47,
+    "constellation": "Virgo",
+    "distance": 250,
+    "apparentMagnitude": 0.97,
+    "age": 12.5e6,
+    "mass": 7.21,
+    "type": "giant"
+  },
+  {
+    "name": "Spica B",
+    "temperature": 20900,
+    "luminosity": 2254,
+    "spectralClass": "B2V",
+    "radius": 3.74,
+    "constellation": "Virgo",
+    "distance": 250,
+    "apparentMagnitude": 1.04,
+    "age": null,
+    "mass": 7.21,
     "type": "main sequence"
   }
 ]
