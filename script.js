@@ -361,7 +361,7 @@ d3.json("stars-sort.json").then(function (stars) {
   // Add text about the number of stars
   svg
     .append("text")
-    .style("font-size", "10px")
+    .style("font-size", "11px")
     .attr("class", "number-of-stars")
     .attr("x", width / 2) // Set x to half of the width of the SVG
     .attr("y", margin.top / 2 + 25)
