@@ -16,9 +16,9 @@ let tooltip = d3
   .select("body")
   .append("div")
   .style("position", "absolute")
-  .style("background", "#fff")
+  .style("background", "#ebebeb")
   .style("padding", "5px")
-  .style("border", "1px solid #000")
+  .style("border", "1px solid #121212")
   .style("border-radius", "5px")
   .style("pointer-events", "none") // to prevent the tooltip from interfering with mouse events
   .style("display", "none")
