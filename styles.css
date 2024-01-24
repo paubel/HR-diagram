@@ -1,21 +1,27 @@
+:root {
+  --primary-color: #444;
+  --background-color: #121212;
+  --text-color: #ebebeb;
+  --border-color: #ebebeb;
+}
 #hr-diagram {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: sans-serif;
 }
 
 svg {
-  background-color: black;
+  background-color: var(--background-color);
   /* stroke: white; */
-  fill: white;
+  fill: var(--text-color);
 }
 label[for="dropdown"] {
-  color: white;
+  color: var(--text-color);
   border-radius: 5px;
   padding: 5px;
   font-size: 0.8em;
@@ -23,13 +29,69 @@ label[for="dropdown"] {
   top: 10px;
   right: 20px;
   z-index: 1;
+}
+
+.btn-contact,
+.close-button {
+  background-color: #444;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 0.8rem;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
   z-index: 1;
+}
+.btn-contact {
+  position: absolute;
+  width: 10vw;
+  max-width: 120px;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.modal {
+  border-radius: 25px;
+  color: var(--text-color);
+  position: fixed;
+  max-width: 60ch;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.modal a {
+  color: violet;
+}
+
+.modal .contact-form {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh 1vw;
+}
+.contact-textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.contact-button {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 #dropdown {
   background-color: #444;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 5px;
   font-size: 1em;

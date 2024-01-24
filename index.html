@@ -17,18 +17,49 @@
     <meta name="description"
         content="This project is a HR-diagram of stars using D3.js. It allows users to interactively explore various properties of stars such as temperature, luminosity, radius, and more. Users can hover over individual stars to see detailed information and can also adjust the size of the stars using a dropdown menu.">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="modal.js"></script>
     <link rel="stylesheet" href="./styles.css">
 
 </head>
 
 <body>
     <!--     <div id="hr-diagram-container"></div> -->
+    <button class="btn-contact open-button">About Me / Contact </button>
+    <dialog class="modal" id="modal">
+        <button class="button close-button">X</button>
+        <div class="modal-content">
+            <p>This project is a HR-diagram of stars using D3.js. It allows users to interactively explore various
+                properties of stars such as temperature, luminosity, radius, and more. Users can hover over individual
+                stars to see detailed information and can also adjust the size of the stars using a dropdown menu. For
+                more information on HR diagrams, you can visit the following site: <a
+                    href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram" target="_blank">HR Diagram
+                    - Wikipedia</a>
+            </p>
+            See the project on <a href="https://github.com/paubel/HR-diagram" target="_blank">GitHub</a>
+            <p>If you want to contact me, please fill in this form</p>
+            <form class="contact-form" target="_blank" action="https://formsubmit.co/fc585dbcd8ea518bfccc9c4030074c61"
+                method="POST">
+
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+
+                <textarea class="contact-textarea" placeholder="Your Message" name="message" rows="10"
+                    required></textarea>
+
+                <button class="contact-button" type="submit">Submit
+                    Form</button>
+            </form>
+        </div>
+
+    </dialog>
     <label for="dropdown">Select</label>
     <select id="dropdown"></select>
 
 
     <svg id="hr-diagram"></svg>
     <script src="script.js"></script>
+
 
 </body>
 <!-- https://codeshack.io/json-sorter/ -->
