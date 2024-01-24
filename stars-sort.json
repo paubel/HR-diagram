@@ -18,7 +18,7 @@
     "luminosity": 1000000,
     "spectralClass": "O or WR",
     "radius": 240,
-    "constellation": "Andromeda",
+    "constellation": "Carina",
     "distance": 7500,
     "apparentMagnitude": 4.3,
     "age": 3000000,
@@ -240,7 +240,7 @@
     "constellation": "Boötes",
     "distance": 119.81,
     "apparentMagnitude": 6.5,
-    "age": 5600000000,
+    "age": 5.6e9,
     "mass": 1.05,
     "type": "main sequence"
   },
@@ -253,7 +253,7 @@
     "constellation": "Boötes",
     "distance": 119.81,
     "apparentMagnitude": 8.7,
-    "age": 11300000000,
+    "age": 11.3e9,
     "mass": 1.05,
     "type": "main sequence"
   },
@@ -266,7 +266,7 @@
     "constellation": "Boötes",
     "distance": 236,
     "apparentMagnitude": 2.37,
-    "age": 37400000000,
+    "age": 37.4e6,
     "mass": 4.6,
     "type": "giant"
   },
@@ -670,6 +670,7 @@
     "constellation": "Eridanus",
     "distance": 167,
     "apparentMagnitude": 2.91,
+    "age": null,
     "mass": 2.6,
     "type": "giant"
   },
@@ -682,7 +683,7 @@
     "constellation": "Eridanus",
     "distance": 167,
     "apparentMagnitude": 4.119,
-    "age": 10000000000,
+    "age": null,
     "mass": 2.4,
     "type": "giant"
   },
@@ -1211,8 +1212,8 @@
     "constellation": "Pleiades",
     "distance": 5.978,
     "apparentMagnitude": 9.5,
-    "age": 10000000000,
-    "mass": 5,
+    "age": 10e9,
+    "mass": 0.144,
     "type": "red dwarf"
   },
   {

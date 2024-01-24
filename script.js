@@ -94,7 +94,9 @@ d3.json("stars-sort.json").then(function (stars) {
       "Closest Stars 100 ly",
       "Closest Stars 1000 ly",
       "Farthest Stars 1000 ly",
-      "Bright Stars",
+      "App. mag. < 0.6",
+      "App. mag. 0.6 to 2.0",
+      "App. mag. > 2.0",
       "Bigger than 50 R⊙",
       "Bigger than 10 R⊙",
       "Bigger than 1 R⊙",
@@ -202,8 +204,19 @@ d3.json("stars-sort.json").then(function (stars) {
       case "Farthest Stars 1000 ly":
         filteredStars = stars.filter((star) => star.distance >= 1000);
         break;
-      case "Bright Stars":
+      /*   case "Bright Stars":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 2);
+        break; */
+      case "App. mag. < 0.6":
+        filteredStars = stars.filter((star) => star.apparentMagnitude <= 0.6);
+        break;
+      case "App. mag. 0.6 to 2.0":
+        filteredStars = stars.filter(
+          (star) => star.apparentMagnitude > 0.6 && star.apparentMagnitude <= 2
+        );
+        break;
+      case "App. mag. > 2.0":
+        filteredStars = stars.filter((star) => star.apparentMagnitude > 2);
         break;
       case "Bigger than 50 R⊙":
         filteredStars = stars.filter((star) => star.radius >= 50);
