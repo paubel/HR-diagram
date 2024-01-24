@@ -73,7 +73,7 @@
     "distance": 350,
     "apparentMagnitude": 2.28,
     "age": null,
-    "mass": null,
+
     "type": "giant"
   },
   {
@@ -293,7 +293,7 @@
     "distance": 86.8,
     "apparentMagnitude": 3.03,
     "age": null,
-    "mass": null,
+
     "type": "giant"
   },
   {
@@ -762,7 +762,7 @@
     "distance": 109,
     "apparentMagnitude": -0.68,
     "age": null,
-    "mass": 12.81,
+    "mass": 2.81,
     "type": "subgiant"
   },
   {
@@ -1161,7 +1161,7 @@
     "distance": 90,
     "apparentMagnitude": 2.12,
     "age": null,
-    "mass": null,
+
     "type": "main sequence"
   },
   {
@@ -1212,7 +1212,7 @@
     "constellation": "Pleiades",
     "distance": 5.978,
     "apparentMagnitude": 9.5,
-    "age": 10e9,
+    "age": 10.1e9,
     "mass": 0.144,
     "type": "red dwarf"
   },
