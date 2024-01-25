@@ -240,7 +240,7 @@ d3.json("stars-sort.json").then(function (stars) {
         filteredStars = stars.filter((star) => star.radius < 1);
         break;
       case "Age < 1 Myr":
-        filteredStars = stars.filter((star) => star.age <= 1000000);
+        filteredStars = stars.filter((star) => star.age <= 1000000 && star.age);
         break;
       case "Age 1 to 10 Myr":
         filteredStars = stars.filter(
