@@ -27,7 +27,7 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([40000, 0])
+  .domain([38000, 0])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3
@@ -448,7 +448,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .style("fill", "#fff") // Change the font color to white
     .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
   // Add x-axis
-  const xAxis = d3.axisBottom(xScale).ticks(5, "s");
+  const xAxis = d3.axisBottom(xScale).ticks(10, "d");
 
   svg
     .append("g")
@@ -457,7 +457,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .call(xAxis);
 
   // Add y-axis
-  const yAxis = d3.axisLeft(yScale).ticks(5, "s");
+  const yAxis = d3.axisLeft(yScale).ticks(5, "d");
   svg
     .append("g")
     .attr("class", "y-axis")
@@ -481,7 +481,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .attr("y", 15)
     .attr("transform", "rotate(-90)")
     .style("text-anchor", "middle")
-    .text("Luminosity (Solar Units)");
+    .text("Luminosity (L⊙)");
 
   svg
     .selectAll("circle")
@@ -552,9 +552,10 @@ d3.json("stars-sort.json").then(function (stars) {
     svg
       .select(".x-axis")
       .attr("transform", `translate(0, ${height - margin.bottom})`)
-      .call(d3.axisBottom(xScale));
+      .call(d3.axisBottom(xScale))
+      .call(xAxis);
 
-    svg.select(".y-axis").call(d3.axisLeft(yScale));
+    svg.select(".y-axis").call(d3.axisLeft(yScale)).call(yAxis);
 
     // Update the positions of the circles
     svg
