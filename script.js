@@ -101,8 +101,7 @@ d3.json("stars-sort.json").then(function (stars) {
       "Radius 10 to 50 R⊙",
       "Radius 1 to 10 R⊙",
       "Radius < 1 R⊙",
-      "Age < 1 Myr",
-      "Age 1 to 10 Myr",
+      "Age < 10 Myr",
       "Age 10 to 100 Myr",
       "Age 100 to 1 Gyr",
       "Age 1 to 10 Gyr",
@@ -239,12 +238,9 @@ d3.json("stars-sort.json").then(function (stars) {
       case "Radius < 1 R⊙":
         filteredStars = stars.filter((star) => star.radius < 1);
         break;
-      case "Age < 1 Myr":
-        filteredStars = stars.filter((star) => star.age <= 1000000 && star.age);
-        break;
-      case "Age 1 to 10 Myr":
+      case "Age < 10 Myr":
         filteredStars = stars.filter(
-          (star) => star.age > 1000000 && star.age <= 10000000
+          (star) => star.age <= 10000000 && star.age
         );
         break;
       case "Age 10 to 100 Myr":
@@ -567,9 +563,9 @@ d3.json("stars-sort.json").then(function (stars) {
       .attr("cy", (d) => yScale(d.luminosity));
 
     // Update the position of the headline and number of stars text
-    svg.select(".headline").attr("x", width / 2);
+    svg.select(".headline").attr("x", width / 2 - 40);
     svg.select(".number-of-stars").attr("x", width / 2);
-    svg.select(".creator-name").attr("x", width / 2 + 125);
+    svg.select(".creator-name").attr("x", width / 2 + 85);
 
     svg.select(".y-label").attr("x", -height / 2);
 

@@ -214,7 +214,7 @@
     "constellation": "Boötes",
     "distance": 36.7,
     "apparentMagnitude": -0.05,
-    "age": 7.1,
+    "age": 7.1e6,
     "mass": 1.08,
     "type": "giant"
   },
