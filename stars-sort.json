@@ -13,19 +13,6 @@
     "type": "main sequence"
   },
   {
-    "name": "Eta Carinae B",
-    "temperature": 37200,
-    "luminosity": 1000000,
-    "spectralClass": "O or WR",
-    "radius": 240,
-    "constellation": "Carina",
-    "distance": 7500,
-    "apparentMagnitude": 4.3,
-    "age": 3000000,
-    "mass": 50,
-    "type": "supergiant"
-  },
-  {
     "name": "Alpha Andromedae A",
     "temperature": 13800,
     "luminosity": 240,
@@ -73,8 +60,33 @@
     "distance": 350,
     "apparentMagnitude": 2.28,
     "age": null,
-
     "type": "giant"
+  },
+  {
+    "name": "Fomalhaut C",
+    "temperature": 3132,
+    "luminosity": 0.004603,
+    "spectralClass": "M4V",
+    "radius": 0.2,
+    "constellation": "Aquarius",
+    "distance": 25.037,
+    "apparentMagnitude": 12.624,
+    "age": 440000000,
+    "mass": 0.725,
+    "type": "red dwarf"
+  },
+  {
+    "name": "Altair",
+    "temperature": 7700,
+    "luminosity": 10.6,
+    "spectralClass": "A7V",
+    "radius": 1.78,
+    "constellation": "Aquila",
+    "distance": 16.73,
+    "apparentMagnitude": 0.76,
+    "age": 100000000,
+    "mass": 1.86,
+    "type": "main sequence"
   },
   {
     "name": "Hamal",
@@ -214,7 +226,7 @@
     "constellation": "Boötes",
     "distance": 36.7,
     "apparentMagnitude": -0.05,
-    "age": 7.1e6,
+    "age": 7100000,
     "mass": 1.08,
     "type": "giant"
   },
@@ -240,7 +252,7 @@
     "constellation": "Boötes",
     "distance": 119.81,
     "apparentMagnitude": 6.5,
-    "age": 5.6e9,
+    "age": 5600000000,
     "mass": 1.05,
     "type": "main sequence"
   },
@@ -253,7 +265,7 @@
     "constellation": "Boötes",
     "distance": 119.81,
     "apparentMagnitude": 8.7,
-    "age": 11.3e9,
+    "age": 11300000000,
     "mass": 1.05,
     "type": "main sequence"
   },
@@ -266,7 +278,7 @@
     "constellation": "Boötes",
     "distance": 236,
     "apparentMagnitude": 2.37,
-    "age": 37.4e6,
+    "age": 37400000,
     "mass": 4.6,
     "type": "giant"
   },
@@ -293,7 +305,6 @@
     "distance": 86.8,
     "apparentMagnitude": 3.03,
     "age": null,
-
     "type": "giant"
   },
   {
@@ -401,6 +412,19 @@
     "type": "white dwarf"
   },
   {
+    "name": "Adhara A",
+    "temperature": 22900,
+    "luminosity": 38700,
+    "spectralClass": "B2II",
+    "radius": 13.9,
+    "constellation": "Canis Major",
+    "distance": 430,
+    "apparentMagnitude": 1.5,
+    "age": 22500000,
+    "mass": 12.6,
+    "type": "giant"
+  },
+  {
     "name": "Procyon A",
     "temperature": 6530,
     "luminosity": 6.93,
@@ -440,6 +464,19 @@
     "type": "main sequence"
   },
   {
+    "name": "Eta Carinae B",
+    "temperature": 37200,
+    "luminosity": 1000000,
+    "spectralClass": "O or WR",
+    "radius": 240,
+    "constellation": "Carina",
+    "distance": 7500,
+    "apparentMagnitude": 4.3,
+    "age": 3000000,
+    "mass": 50,
+    "type": "supergiant"
+  },
+  {
     "name": "Eta Carinae A",
     "temperature": 35000,
     "luminosity": 4600000,
@@ -451,6 +488,19 @@
     "age": 3000000,
     "mass": 100,
     "type": "hypergiant"
+  },
+  {
+    "name": "Canopus",
+    "temperature": 7400,
+    "luminosity": 10700,
+    "spectralClass": "A9 II",
+    "radius": 71,
+    "constellation": "Carina",
+    "distance": 310,
+    "apparentMagnitude": -0.74,
+    "age": null,
+    "mass": 8,
+    "type": "giant"
   },
   {
     "name": "Schedar",
@@ -584,6 +634,32 @@
     "type": "red dwarf"
   },
   {
+    "name": "Hadar Aa",
+    "temperature": 25000,
+    "luminosity": 31600,
+    "spectralClass": "B1 III",
+    "radius": 9,
+    "constellation": "Centaurus",
+    "distance": 390,
+    "apparentMagnitude": 0.61,
+    "age": 14100000,
+    "mass": 12.02,
+    "type": "giant"
+  },
+  {
+    "name": "Hadar Ab",
+    "temperature": 23000,
+    "luminosity": 25100,
+    "spectralClass": "B1 III",
+    "radius": 9,
+    "constellation": "Centaurus",
+    "distance": 390,
+    "apparentMagnitude": 0.61,
+    "age": 14100000,
+    "mass": 10.58,
+    "type": "giant"
+  },
+  {
     "name": "Star Tau Ceti",
     "temperature": 5320,
     "luminosity": 0.45,
@@ -636,6 +712,45 @@
     "type": "main sequence"
   },
   {
+    "name": "Acrux 1",
+    "temperature": 24000,
+    "luminosity": 25000,
+    "spectralClass": "B0.5IV",
+    "radius": 7.8,
+    "constellation": "Crux",
+    "distance": 320,
+    "apparentMagnitude": 1.33,
+    "age": null,
+    "mass": 17.8,
+    "type": "subgiant"
+  },
+  {
+    "name": "Acrux 2",
+    "temperature": 28000,
+    "luminosity": 16000,
+    "spectralClass": "B1V",
+    "radius": 5.4,
+    "constellation": "Crux",
+    "distance": 320,
+    "apparentMagnitude": 1.75,
+    "age": 10800000,
+    "mass": 15.52,
+    "type": "supergiant"
+  },
+  {
+    "name": "Mimosa A",
+    "temperature": 27000,
+    "luminosity": 34000,
+    "spectralClass": "B0.5 III / B2V",
+    "radius": 8.4,
+    "constellation": "Crux",
+    "distance": 280,
+    "apparentMagnitude": 1.25,
+    "age": 10500000,
+    "mass": 16,
+    "type": "giant"
+  },
+  {
     "name": "Deneb",
     "temperature": 8525,
     "luminosity": 196000,
@@ -686,6 +801,32 @@
     "age": null,
     "mass": 2.4,
     "type": "giant"
+  },
+  {
+    "name": "Achernar",
+    "temperature": 15000,
+    "luminosity": 3150,
+    "spectralClass": "B6Vep",
+    "radius": 11.4,
+    "constellation": "Eridanus",
+    "distance": 139,
+    "apparentMagnitude": 0.43,
+    "age": 37300000,
+    "mass": 6.7,
+    "type": "main sequence"
+  },
+  {
+    "name": "Achernar",
+    "temperature": 15000,
+    "luminosity": 3150,
+    "spectralClass": "B6Vep",
+    "radius": 11.4,
+    "constellation": "Eridanus",
+    "distance": 139,
+    "apparentMagnitude": 0.43,
+    "age": 37300000,
+    "mass": 6.7,
+    "type": "main sequence"
   },
   {
     "name": "Castor Aa",
@@ -935,6 +1076,19 @@
     "type": "giant"
   },
   {
+    "name": "Vega",
+    "temperature": 9602,
+    "luminosity": 40.12,
+    "spectralClass": "A0Va",
+    "radius": 2.5,
+    "constellation": "Lyra",
+    "distance": 25.04,
+    "apparentMagnitude": 0.026,
+    "age": 455000000,
+    "mass": 2.135,
+    "type": "main sequence"
+  },
+  {
     "name": "Alpha Monocerotis",
     "temperature": 4879,
     "luminosity": 63.7,
@@ -1161,7 +1315,6 @@
     "distance": 90,
     "apparentMagnitude": 2.12,
     "age": null,
-
     "type": "main sequence"
   },
   {
@@ -1191,6 +1344,32 @@
     "type": "giant"
   },
   {
+    "name": "Fomalhaut A",
+    "temperature": 8590,
+    "luminosity": 16.63,
+    "spectralClass": "A3 V",
+    "radius": 1.842,
+    "constellation": "Piscis Austrinus",
+    "distance": 25.13,
+    "apparentMagnitude": 1.72,
+    "age": 440000000,
+    "mass": 1.92,
+    "type": "main sequence"
+  },
+  {
+    "name": "Fomalhaut B",
+    "temperature": 4711,
+    "luminosity": 0.19,
+    "spectralClass": "K5Vp",
+    "radius": 0.629,
+    "constellation": "Piscis Austrinus",
+    "distance": 24.793,
+    "apparentMagnitude": 6.48,
+    "age": 440000000,
+    "mass": 0.725,
+    "type": "main sequence"
+  },
+  {
     "name": "Electra",
     "temperature": 13484,
     "luminosity": 940,
@@ -1212,9 +1391,35 @@
     "constellation": "Pleiades",
     "distance": 5.978,
     "apparentMagnitude": 9.5,
-    "age": 10.1e9,
+    "age": 10100000000,
     "mass": 0.144,
     "type": "red dwarf"
+  },
+  {
+    "name": "Antares A",
+    "temperature": 3660,
+    "luminosity": 75900,
+    "spectralClass": "M1.5Iab-Ib",
+    "radius": 740,
+    "constellation": "Scorpius",
+    "distance": 550,
+    "apparentMagnitude": 0.8,
+    "age": 15000000,
+    "mass": 12.5,
+    "type": "supergiant"
+  },
+  {
+    "name": "Antares B",
+    "temperature": 18500,
+    "luminosity": 2754,
+    "spectralClass": "B2.5V",
+    "radius": 5.2,
+    "constellation": "Scorpius",
+    "distance": 550,
+    "apparentMagnitude": 5.5,
+    "age": null,
+    "mass": 7.2,
+    "type": "main sequence"
   },
   {
     "name": "Aldebaran",
@@ -1371,149 +1576,6 @@
     "type": "main sequence"
   },
   {
-    "name": "Canopus",
-    "temperature": 7400,
-    "luminosity": 10700,
-    "spectralClass": "A9 II",
-    "radius": 71,
-    "constellation": "Carina",
-    "distance": 310,
-    "apparentMagnitude": -0.74,
-    "age": null,
-    "mass": 8.0,
-    "type": "giant"
-  },
-  {
-    "name": "Vega",
-    "temperature": 9602,
-    "luminosity": 40.12,
-    "spectralClass": "A0Va",
-    "radius": 2.5,
-    "constellation": "Lyra",
-    "distance": 25.04,
-    "apparentMagnitude": 0.026,
-    "age": 455e6,
-    "mass": 2.135,
-    "type": "main sequence"
-  },
-  {
-    "name": "Achernar",
-    "temperature": 15000,
-    "luminosity": 3150,
-    "spectralClass": "B6Vep",
-    "radius": 11.4,
-    "constellation": "Eridanus",
-    "distance": 139,
-    "apparentMagnitude": 0.43,
-    "age": 37.3e6,
-    "mass": 6.7,
-    "type": "main sequence"
-  },
-  {
-    "name": "Achernar",
-    "temperature": 15000,
-    "luminosity": 3150,
-    "spectralClass": "B6Vep",
-    "radius": 11.4,
-    "constellation": "Eridanus",
-    "distance": 139,
-    "apparentMagnitude": 0.43,
-    "age": 37.3e6,
-    "mass": 6.7,
-    "type": "main sequence"
-  },
-  {
-    "name": "Hadar Aa",
-    "temperature": 25000,
-    "luminosity": 31600,
-    "spectralClass": "B1 III",
-    "radius": 9,
-    "constellation": "Centaurus",
-    "distance": 390,
-    "apparentMagnitude": 0.61,
-    "age": 14.1e6,
-    "mass": 12.02,
-    "type": "giant"
-  },
-  {
-    "name": "Hadar Ab",
-    "temperature": 23000,
-    "luminosity": 25100,
-    "spectralClass": "B1 III",
-    "radius": 9,
-    "constellation": "Centaurus",
-    "distance": 390,
-    "apparentMagnitude": 0.61,
-    "age": 14.1e6,
-    "mass": 10.58,
-    "type": "giant"
-  },
-  {
-    "name": "Altair",
-    "temperature": 7700,
-    "luminosity": 10.6,
-    "spectralClass": "A7V",
-    "radius": 1.78,
-    "constellation": "Aquila",
-    "distance": 16.73,
-    "apparentMagnitude": 0.76,
-    "age": 100e6,
-    "mass": 1.86,
-    "type": "main sequence"
-  },
-  {
-    "name": "Acrux 1",
-    "temperature": 24000,
-    "luminosity": 25000,
-    "spectralClass": "B0.5IV",
-    "radius": 7.8,
-    "constellation": "Crux",
-    "distance": 320,
-    "apparentMagnitude": 1.33,
-    "age": null,
-    "mass": 17.8,
-    "type": "subgiant"
-  },
-  {
-    "name": "Acrux 2",
-    "temperature": 28000,
-    "luminosity": 16000,
-    "spectralClass": "B1V",
-    "radius": 5.4,
-    "constellation": "Crux",
-    "distance": 320,
-    "apparentMagnitude": 1.75,
-    "age": 10.8e6,
-    "mass": 15.52,
-    "type": "supergiant"
-  },
-  {
-    "name": "Antares A",
-    "temperature": 3660,
-    "luminosity": 75900,
-    "spectralClass": "M1.5Iab-Ib",
-    "radius": 740,
-    "constellation": "Scorpius",
-    "distance": 550,
-    "apparentMagnitude": 0.8,
-    "age": 15e6,
-    "mass": 12.5,
-    "type": "supergiant"
-  },
-  {
-    "name": "Antares B",
-    "temperature": 18500,
-    "luminosity": 2754,
-    "spectralClass": "B2.5V",
-    "radius": 5.2,
-    "constellation": "Scorpius",
-    "distance": 550,
-    "apparentMagnitude": 5.5,
-    "age": null,
-    "mass": 7.2,
-    "type": "main sequence"
-  },
-  {
     "name": "Spica A",
     "temperature": 25300,
     "luminosity": 20512,
@@ -1522,7 +1584,7 @@
     "constellation": "Virgo",
     "distance": 250,
     "apparentMagnitude": 0.97,
-    "age": 12.5e6,
+    "age": 12500000,
     "mass": 7.21,
     "type": "giant"
   },
@@ -1538,5 +1600,44 @@
     "age": null,
     "mass": 7.21,
     "type": "main sequence"
+  },
+  {
+    "name": "Gacrux",
+    "temperature": 3626,
+    "luminosity": 820,
+    "spectralClass": "M3.5 III",
+    "radius": 84,
+    "constellation": "Crux",
+    "distance": 88.6,
+    "apparentMagnitude": 1.63,
+    "age": null,
+    "mass": 1.5,
+    "type": "giant"
+  },
+  {
+    "name": "Shaula A",
+    "temperature": 25000,
+    "luminosity": 36300,
+    "spectralClass": "B2IV",
+    "radius": 8.8,
+    "constellation": "Scorpius",
+    "distance": 570,
+    "apparentMagnitude": 1.62,
+    "age": 11.5e6,
+    "mass": 14.5,
+    "type": "subgiant"
+  },
+  {
+    "name": "Elnath",
+    "temperature": 13824,
+    "luminosity": 700,
+    "spectralClass": "B7III",
+    "radius": 4.2,
+    "constellation": "Taurus",
+    "distance": 134,
+    "apparentMagnitude": 1.65,
+    "age": 100e6,
+    "mass": 5.0,
+    "type": "giant"
   }
 ]

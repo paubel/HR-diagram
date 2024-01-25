@@ -15,6 +15,33 @@ body {
   font-family: sans-serif;
 }
 
+nav {
+  position: absolute;
+  bottom: 50px;
+  left: 250px;
+  transform: translateX(-50%);
+  gap: 0.3rem 1rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    left: 200px;
+  }
+}
+
+a {
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+}
+
 svg {
   background-color: var(--background-color);
   /* stroke: white; */
@@ -31,6 +58,10 @@ label[for="dropdown"] {
   z-index: 1;
 }
 
+.btn-contact {
+  font-size: 1rem;
+}
+
 .btn-contact,
 .close-button {
   background-color: #444;
@@ -38,21 +69,12 @@ label[for="dropdown"] {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 2px;
-  font-size: 0.8rem;
+  /*  font-size: 0.8rem; */
 }
 .close-button {
   position: absolute;
   top: 10px;
   right: 20px;
-  z-index: 1;
-}
-.btn-contact {
-  position: absolute;
-  width: 10vw;
-  max-width: 120px;
-  top: 54px;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -69,7 +91,7 @@ label[for="dropdown"] {
 }
 
 .modal a {
-  color: violet;
+  color: var(--text-color);
 }
 
 .modal .contact-form {
@@ -94,7 +116,7 @@ label[for="dropdown"] {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 5px;
-  font-size: 1em;
+  font-size: 0.8rem;
   position: absolute;
   top: 40px;
   right: 20px;
