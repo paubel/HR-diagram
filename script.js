@@ -27,12 +27,12 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([38000, 0])
+  .domain([37500, 1000])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3
   .scaleLog()
-  .domain([0.00001, 10000000])
+  .domain([0.00004, 4000000])
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
@@ -399,7 +399,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .attr("class", "headline")
     .attr("x", width / 2 - 40)
-    .attr("y", margin.top / 2 + 10)
+    .attr("y", margin.top / 2 + 15)
     .attr("text-anchor", "middle")
     .style("font-size", "24px")
     .style("text-decoration", "none")
@@ -409,7 +409,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .attr("class", "creator-name")
     .attr("x", width / 2 + 85)
-    .attr("y", margin.top / 2 + 9)
+    .attr("y", margin.top / 2 + 15)
     .attr("text-anchor", "middle")
     .style("font-size", "14px")
     .style("text-decoration", "none")
@@ -420,7 +420,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .style("font-size", "11px")
     .attr("class", "number-of-stars")
     .attr("x", width / 2) // Set x to half of the width of the SVG
-    .attr("y", margin.top / 2 + 27)
+    .attr("y", margin.top / 2 + 30)
     .attr("text-anchor", "middle") // Center the text at the x position
     .text(stars.length + " stars in database");
   // Create circles for stars on the HR diagram with radii based on the star size and colored by temperature
