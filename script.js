@@ -1,6 +1,9 @@
 let container = d3.select("#hr-diagram");
 let width = parseInt(container.style("width"));
 let height = parseInt(container.style("height"));
+let checkbox = d3.select("#star-name-toggle");
+
+// Hide star labels initially
 
 /* const width = 800;
 const height = 600; */
@@ -130,6 +133,17 @@ d3.json("stars-sort.json").then(function (stars) {
     .attr("class", "constellation")
     .text((d) => d);
 
+  checkbox.on("change", function () {
+    // In the event handler, select all star names
+    let starNames = d3.selectAll(".star-label");
+
+    //  If checkbox is checked, set star names to visible, else set them to hidden
+    if (d3.select(this).property("checked")) {
+      starNames.style("display", "block");
+    } else {
+      starNames.style("display", "none");
+    }
+  });
   // Add an event listener to the dropdown
   dropdown.on("change", function () {
     // Get the selected option
@@ -385,6 +399,8 @@ d3.json("stars-sort.json").then(function (stars) {
       .style("fill", "#fff")
       .style("text-shadow", "2px 2px 4px #000");
 
+    /*     d3.selectAll(".star-label").style("display", "none"); */
+
     labels
       .attr("x", (d) => xScale(d.temperature) + 10)
       .attr("y", (d) => yScale(d.luminosity));
@@ -440,6 +456,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .data(stars)
     .enter()
     .append("text")
+    // Code that creates the star labels
     .attr("class", "star-label") // And here
     .attr("x", (d) => xScale(d.temperature) + 10)
     .attr("y", (d) => yScale(d.luminosity))
@@ -449,6 +466,9 @@ d3.json("stars-sort.json").then(function (stars) {
     .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
   // Add x-axis
   const xAxis = d3.axisBottom(xScale).ticks(10, "d");
+
+  //// Hide star labels initially
+  /*   d3.selectAll(".star-label").style("display", "none"); */
 
   svg
     .append("g")
@@ -531,6 +551,7 @@ d3.json("stars-sort.json").then(function (stars) {
       tooltip.style("display", "none");
     });
 
+  // Add an event listener to the window
   window.addEventListener("resize", () => {
     width = parseInt(container.style("width"));
     height = parseInt(container.style("height"));

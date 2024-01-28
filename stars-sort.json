@@ -1639,5 +1639,70 @@
     "age": 100e6,
     "mass": 5.0,
     "type": "giant"
+  },
+  {
+    "name": "Miaplacidus",
+    "temperature": 8866,
+    "luminosity": 288,
+    "spectralClass": "A1III",
+    "radius": 6.8,
+    "constellation": "Carina",
+    "distance": 113.2,
+    "apparentMagnitude": 1.69,
+    "age": 260e6,
+    "mass": 3.5,
+    "type": "giant"
+  },
+  {
+    "name": "Alioth",
+    "temperature": 9020,
+    "luminosity": 102,
+    "spectralClass": "A1III-IVp kB9",
+    "radius": 4.14,
+    "constellation": "Ursa Major",
+    "distance": 82.6,
+    "apparentMagnitude": 1.77,
+    "age": 300e6,
+    "mass": 2.91,
+    "type": "subgiant"
+  },
+  {
+    "name": "Mirzam",
+    "temperature": 23150,
+    "luminosity": 26600,
+    "spectralClass": "B1II-III",
+    "radius": 9.7,
+    "constellation": "Canis Major",
+    "distance": 490,
+    "apparentMagnitude": 1.985,
+    "age": 12.4e6,
+    "mass": 13.5,
+    "type": "giant"
+  },
+  {
+    "name": "Wezen",
+    "temperature": 6390,
+    "luminosity": 82000,
+    "spectralClass": "F8 Ia",
+    "radius": 215,
+    "constellation": "Canis Major",
+    "distance": 1600,
+    "apparentMagnitude": 1.824,
+    "age": 12e6,
+    "mass": 16.9,
+    "type": "supergiant"
+  },
+  {
+    "name": "Alphard",
+    "temperature": 4120,
+    "luminosity": 780,
+    "spectralClass": "K3 II-III",
+    "radius": 50.5,
+    "constellation": "Hydra",
+    "distance": 177,
+    "apparentMagnitude": 2.0,
+    "age": 420e6,
+    "mass": 3.03,
+    "type": "giant"
   }
 ]
