@@ -30,7 +30,7 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([37500, 1000])
+  .domain([37000, 1000])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3
@@ -473,7 +473,11 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("g")
     .attr("class", "x-axis")
-    .attr("transform", `translate(0, ${height - margin.bottom})`)
+    /* .attr("transform", `translate(0, ${height - margin.bottom})`) */
+    .attr(
+      "transform",
+      `translate(${margin.left - 90}, ${height - margin.bottom})`
+    ) // Decrease the value to move the x-axis to the left
     .call(xAxis);
 
   // Add y-axis
@@ -481,8 +485,11 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("g")
     .attr("class", "y-axis")
-    .attr("transform", `translate(${margin.left}, 0)`)
-    .call(yAxis);
+    .attr("transform", `translate(${margin.left - 30}, 0)`)
+    .call(yAxis)
+    .selectAll("text")
+    .attr("transform", "rotate(-60)") // Rotate the labels -45 degrees
+    .style("text-anchor", "end");
 
   // Add x-axis label
   svg
@@ -497,7 +504,7 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("text")
     .attr("class", "y-label")
-    .attr("x", -height / 2)
+    .attr("x", -height / 2 - 20)
     .attr("y", 15)
     .attr("transform", "rotate(-90)")
     .style("text-anchor", "middle")
