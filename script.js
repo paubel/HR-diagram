@@ -2,6 +2,7 @@ let container = d3.select("#hr-diagram");
 let width = parseInt(container.style("width"));
 let height = parseInt(container.style("height"));
 let checkbox = d3.select("#star-name-toggle");
+let starNames = d3.selectAll(".star-label");
 
 // Hide star labels initially
 
@@ -93,6 +94,7 @@ d3.json("stars-sort.json").then(function (stars) {
       "G stars",
       "K stars",
       "M stars",
+      "D stars",
       "Distance < 10 ly",
       "Distance 10 to 100 ly",
       "Distance 100 to 1000 ly",
@@ -133,18 +135,8 @@ d3.json("stars-sort.json").then(function (stars) {
     .attr("class", "constellation")
     .text((d) => d);
 
-  checkbox.on("change", function () {
-    // In the event handler, select all star names
-    let starNames = d3.selectAll(".star-label");
-
-    //  If checkbox is checked, set star names to visible, else set them to hidden
-    if (d3.select(this).property("checked")) {
-      starNames.style("display", "block");
-    } else {
-      starNames.style("display", "none");
-    }
-  });
   // Add an event listener to the dropdown
+
   dropdown.on("change", function () {
     // Get the selected option
     const selectedOption = d3.select(this).property("value");
@@ -206,6 +198,11 @@ d3.json("stars-sort.json").then(function (stars) {
       case "M stars":
         filteredStars = stars.filter(
           (star) => star.spectralClass.charAt(0) == "M"
+        );
+        break;
+      case "D stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "D"
         );
         break;
       case "Distance < 10 ly":
@@ -407,6 +404,18 @@ d3.json("stars-sort.json").then(function (stars) {
 
     circles.exit().remove();
     labels.exit().remove();
+  });
+
+  checkbox.on("change", function () {
+    // In the event handler, select all star names
+    starNames = d3.selectAll(".star-label");
+
+    //  If checkbox is checked, set star names to visible, else set them to hidden
+    if (d3.select(this).property("checked")) {
+      starNames.style("display", "block");
+    } else {
+      starNames.style("display", "none");
+    }
   });
 
   svg.selectAll("circle");

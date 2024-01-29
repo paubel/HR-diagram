@@ -12,32 +12,7 @@
     "mass": 1,
     "type": "main sequence"
   },
-  {
-    "name": "Alpha Andromedae A",
-    "temperature": 13800,
-    "luminosity": 240,
-    "spectralClass": "B8IVpMnHg",
-    "radius": 2.7,
-    "constellation": "Andromeda",
-    "distance": 97,
-    "apparentMagnitude": 2.22,
-    "age": 60000000,
-    "mass": 3.8,
-    "type": "subgiant"
-  },
-  {
-    "name": "Alpha Andromedae B",
-    "temperature": 8500,
-    "luminosity": 13,
-    "spectralClass": "A3V",
-    "radius": 1.65,
-    "constellation": "Andromeda",
-    "distance": 97,
-    "apparentMagnitude": 4.21,
-    "age": 70000000,
-    "mass": 1.85,
-    "type": "main sequence"
-  },
+
   {
     "name": "Mirach",
     "temperature": 3842,
@@ -1704,5 +1679,119 @@
     "age": 420e6,
     "mass": 3.03,
     "type": "giant"
+  },
+  {
+    "name": "Alpheratz A",
+    "temperature": 13800,
+    "luminosity": 240,
+    "spectralClass": "B8IVpMnHg",
+    "radius": 2.7,
+    "constellation": "Andromeda",
+    "distance": 97,
+    "apparentMagnitude": 2.22,
+    "age": 60e6,
+    "mass": 3.8,
+    "type": "subgiant"
+  },
+  {
+    "name": "Alpheratz B",
+    "temperature": 8500,
+    "luminosity": 13,
+    "spectralClass": "A3V",
+    "radius": 1.65,
+    "constellation": "Andromeda",
+    "distance": 97,
+    "apparentMagnitude": 4.21,
+    "age": 70e6,
+    "mass": 1.85,
+    "type": "main sequence"
+  },
+  {
+    "name": "Kaus Australis A",
+    "temperature": 9960,
+    "luminosity": 363,
+    "spectralClass": "B9.5 III",
+    "radius": 6.8,
+    "constellation": "Sagittarius",
+    "distance": 143,
+    "apparentMagnitude": 1.85,
+    "age": null,
+    "mass": 3.515,
+    "type": "giant"
+  },
+  {
+    "name": "Kaus Australis B",
+    "temperature": 5807,
+    "luminosity": 0.89,
+    "spectralClass": "B9",
+    "constellation": "Sagittarius",
+    "distance": 143,
+    "mass": 0.95,
+    "type": "main sequence"
+  },
+  {
+    "name": "Sargas",
+    "temperature": 7268,
+    "luminosity": 1834,
+    "spectralClass": "F1 III or F0 II",
+    "radius": 26,
+    "constellation": "Scorpius",
+    "distance": 300,
+    "apparentMagnitude": 1.862,
+    "age": 100e6,
+    "mass": 5.66,
+    "type": "giant"
+  },
+  {
+    "name": "Atria",
+    "temperature": 4150,
+    "luminosity": 5500,
+    "spectralClass": "K2III_Ba1 or K2 IIb-IIIa",
+    "radius": 130,
+    "constellation": "Triangulum Australe",
+    "distance": 391,
+    "apparentMagnitude": 1.91,
+    "age": 48e6,
+    "mass": 7,
+    "type": "giant"
+  },
+  {
+    "name": "Zubeneschamali",
+    "temperature": 12300,
+    "luminosity": 130,
+    "spectralClass": "B8 V",
+    "radius": 4.9,
+    "constellation": "Libra",
+    "distance": 185,
+    "apparentMagnitude": 2.61,
+    "age": 80e6,
+    "mass": 3.5,
+    "type": "main sequence"
+  },
+  {
+    "name": "Polaris Aa",
+    "temperature": 6015,
+    "luminosity": 1260,
+    "spectralClass": "F7Ib",
+    "radius": 37.5,
+    "constellation": "Ursa Minor",
+    "distance": 380,
+    "apparentMagnitude": 1.98,
+    "age": 70e6,
+    "mass": 5.4,
+    "type": "supergiant"
+  },
+  {
+    "name": "Polaris B",
+    "temperature": 6900,
+    "luminosity": 3.9,
+    "spectralClass": "F3V",
+    "radius": 1.38,
+    "constellation": "Ursa Minor",
+    "distance": 380,
+    "apparentMagnitude": 8.7,
+    "age": 70e6,
+    "mass": 1.39,
+    "type": "main sequence"
   }
 ]
