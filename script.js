@@ -36,7 +36,7 @@ const xScale = d3
 
 const yScale = d3
   .scaleLog()
-  .domain([0.00001, 7000000])
+  .domain([0.00003, 7000000])
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
@@ -385,8 +385,8 @@ d3.json("stars-sort.json").then(function (stars) {
       `);
       })
       .on("mousemove", (event) => {
-        tooltip.style("left", event.pageX + 10 + "px");
-        tooltip.style("top", event.pageY - 10 + "px");
+        tooltip.style("left", event.pageX + 1 + "px");
+        tooltip.style("top", event.pageY - 1 + "px");
       })
       .on("mouseout", () => {
         tooltip.style("display", "none");
@@ -484,8 +484,25 @@ d3.json("stars-sort.json").then(function (stars) {
     .style("font-size", "11px") // Increase the font size
     .style("fill", "#fff") // Change the font color to white
     .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
-  // Add x-axis
-  const xAxis = d3.axisBottom(xScale).ticks(10, "d");
+
+  // Define a custom locale with space as the thousand separator
+  const customLocale = {
+    decimal: ".",
+    thousands: " ",
+    grouping: [3],
+    currency: ["$", ""],
+  };
+
+  // Use the custom locale to format the numbers
+  const format = d3.formatLocale(customLocale).format(",");
+
+  // Define x-axis with conditional decimal places and thousand separator
+  const xAxis = d3
+    .axisBottom(xScale)
+    .ticks(10, "d")
+    .tickFormat(function (d) {
+      return d < 1 ? d3.format(".3f")(d) : format(d);
+    }); // Add x-axis
 
   //// Hide star labels initially
   /*   d3.selectAll(".star-label").style("display", "none"); */
@@ -496,12 +513,17 @@ d3.json("stars-sort.json").then(function (stars) {
     /* .attr("transform", `translate(0, ${height - margin.bottom})`) */
     .attr(
       "transform",
-      `translate(${margin.left - 90}, ${height - margin.bottom})`
+      `translate(${margin.left - 60}, ${height - margin.bottom})`
     ) // Decrease the value to move the x-axis to the left
     .call(xAxis);
 
-  // Add y-axis
-  const yAxis = d3.axisLeft(yScale).ticks(5, "d");
+  // Define y-axis with conditional decimal places and thousand separator
+  const yAxis = d3
+    .axisLeft(yScale)
+    .ticks(10, "d")
+    .tickFormat(function (d) {
+      return d < 1 ? parseFloat(d3.format(".3f")(d)) : format(d);
+    });
   svg
     .append("g")
     .attr("class", "y-axis")
@@ -516,7 +538,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .attr("class", "x-label")
     .attr("x", width / 2)
-    .attr("y", height - 10)
+    .attr("y", height - 3)
     .style("text-anchor", "middle")
     .text("Temperature (K)");
 
@@ -571,8 +593,8 @@ d3.json("stars-sort.json").then(function (stars) {
     `);
     })
     .on("mousemove", (event) => {
-      tooltip.style("left", event.pageX + 10 + "px");
-      tooltip.style("top", event.pageY - 10 + "px");
+      tooltip.style("left", event.pageX + 1 + "px");
+      tooltip.style("top", event.pageY - 1 + "px");
     })
     .on("mouseout", () => {
       tooltip.style("display", "none");
@@ -622,7 +644,7 @@ d3.json("stars-sort.json").then(function (stars) {
     svg
       .select(".x-label")
       .attr("x", width / 2)
-      .attr("y", height - margin.bottom + 30); // Adjust this value as needed
+      .attr("y", height - margin.bottom + 35); // Adjust this value as needed
 
     svg
       .selectAll(".star-label") // Select only the star labels
