@@ -31,12 +31,12 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([37000, 1000])
+  .domain([45000, 100])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3
   .scaleLog()
-  .domain([0.00004, 4000000])
+  .domain([0.00001, 7000000])
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
@@ -87,6 +87,7 @@ d3.json("stars-sort.json").then(function (stars) {
       "Main Sequence",
       "White Dwarfs",
       "Red Dwarfs",
+      "L stars",
       "O stars",
       "B stars",
       "A stars",
@@ -165,6 +166,15 @@ d3.json("stars-sort.json").then(function (stars) {
       case "Red Dwarfs":
         filteredStars = stars.filter((star) => star.type == "red dwarf");
         break;
+      case "Brown Dwarfs":
+        filteredStars = stars.filter((star) => star.type == "brown dwarf");
+        break;
+      case "L stars":
+        filteredStars = stars.filter(
+          (star) => star.spectralClass.charAt(0) == "L"
+        );
+        break;
+
       case "O stars":
         filteredStars = stars.filter(
           (star) => star.spectralClass.charAt(0) == "O"
@@ -205,6 +215,7 @@ d3.json("stars-sort.json").then(function (stars) {
           (star) => star.spectralClass.charAt(0) == "D"
         );
         break;
+
       case "Distance < 10 ly":
         filteredStars = stars.filter((star) => star.distance <= 10);
         break;
