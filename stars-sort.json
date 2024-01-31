@@ -2001,5 +2001,31 @@
     "age": 5.6e9,
     "mass": 0.2036,
     "type": "red dwarf"
+  },
+  {
+    "name": "WD 0343+247",
+    "temperature": 4197,
+    "luminosity": 0.000048,
+    "spectralClass": "DX13",
+    "radius": 0.011,
+    "constellation": "Taurus",
+    "distance": 129,
+    "apparentMagnitude": 19.0,
+    "age": 11.49e9,
+    "mass": 0.553,
+    "type": "white dwarf"
+  },
+  {
+    "name": "Methuselah star",
+    "temperature": 5787,
+    "luminosity": 4.82,
+    "spectralClass": "G0IV-V m-5",
+    "radius": 2.04,
+    "constellation": "Libra",
+    "distance": 200.5,
+    "apparentMagnitude": 7.205,
+    "age": 12e9,
+    "mass": 0.81,
+    "type": "subgiant"
   }
 ]

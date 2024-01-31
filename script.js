@@ -224,15 +224,14 @@ d3.json("stars-sort.json").then(function (stars) {
           (star) => star.distance > 10 && star.distance <= 100
         );
         break;
-      case "Distance 100 to 1000 ly":
+      case "Distance 100 to 1 kly":
         filteredStars = stars.filter(
           (star) => star.distance > 100 && star.distance <= 1000
         );
         break;
-      case "Distance > 1000 ly":
+      case "Distance > 1 kly":
         filteredStars = stars.filter((star) => star.distance > 1000);
         break;
-
       case "App. mag. < 0.6":
         filteredStars = stars.filter((star) => star.apparentMagnitude <= 0.6);
         break;
