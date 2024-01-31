@@ -5,7 +5,7 @@
   --border-color: #ebebeb;
 }
 #hr-diagram {
-  margin-top: -25px;
+  /*  margin-top: -25px; */
   width: 100svw;
   height: 98svh;
   position: relative;
@@ -107,8 +107,8 @@ label[for="dropdown"] {
   padding: 5px;
   font-size: 0.7em;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 90px;
+  left: 50px;
   z-index: 1;
 }
 
@@ -120,34 +120,10 @@ label[for="dropdown"] {
   padding: 5px;
   font-size: 0.8rem;
   position: absolute;
-  top: 40px;
-  right: 20px;
+  top: 120px;
+  left: 60px;
   z-index: 1;
 }
-
-/* label[for="star-name-toggle"] {
-  color: var(--text-color);
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 0.8em;
-  position: absolute;
-  top: 70px;
-  right: 40px;
-  z-index: 1;
-}
-
-#star-name-toggle {
-  background-color: #444;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 73px;
-  right: 20px;
-  z-index: 1;
-} */
 
 /* Toggle Switch */
 
@@ -161,12 +137,13 @@ label[for="dropdown"] {
   margin-bottom: 20px; /* Adjust as needed */
 }
 .switch {
-  position: relative;
+  position: absolute;
+  /*   position: relative; */
   display: inline-block;
   width: 49px; /* reduced from 60px */
   height: 22px; /* reduced from 34px */
-  top: 70px;
-  right: 55px;
+  top: 160px;
+  left: 55px;
   z-index: 1;
   font-size: 0.7rem;
 }
