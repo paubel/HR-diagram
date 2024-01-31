@@ -434,8 +434,10 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("text")
     .attr("class", "headline")
-    .attr("x", width / 2 - 40)
-    .attr("y", margin.top / 2 + 15)
+    .attr("x", margin.left + 100) // Position at the left edge
+    .attr("y", height - margin.bottom - 90) // Position at the bottom edge
+    /*    .attr("x", width / 2 - 40)
+    .attr("y", margin.top / 2 + 15) */
     .attr("text-anchor", "middle")
     .style("font-size", "24px")
     .style("text-decoration", "none")
@@ -444,8 +446,8 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("text")
     .attr("class", "creator-name")
-    .attr("x", width / 2 + 85)
-    .attr("y", margin.top / 2 + 15)
+    .attr("x", margin.left + 230) // Position at the left edge
+    .attr("y", height - margin.bottom - 90) // Position at the bottom edge
     .attr("text-anchor", "middle")
     .style("font-size", "14px")
     .style("text-decoration", "none")
@@ -455,8 +457,8 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .style("font-size", "11px")
     .attr("class", "number-of-stars")
-    .attr("x", width / 2) // Set x to half of the width of the SVG
-    .attr("y", margin.top / 2 + 30)
+    .attr("x", margin.left + 100) // Position at the left edge
+    .attr("y", height - margin.bottom - 70) // Position at the bottom edge
     .attr("text-anchor", "middle") // Center the text at the x position
     .text(stars.length + " stars in database");
   // Create circles for stars on the HR diagram with radii based on the star size and colored by temperature
@@ -634,9 +636,13 @@ d3.json("stars-sort.json").then(function (stars) {
       .attr("cy", (d) => yScale(d.luminosity));
 
     // Update the position of the headline and number of stars text
-    svg.select(".headline").attr("x", width / 2 - 40);
-    svg.select(".number-of-stars").attr("x", width / 2);
-    svg.select(".creator-name").attr("x", width / 2 + 85);
+    svg.select(".headline").attr("x", margin.left + 100);
+    svg.select(".number-of-stars").attr("x", margin.left + 100);
+    svg.select(".creator-name").attr("x", margin.left + 230);
+
+    svg.select(".headline").attr("y", height - margin.bottom - 90);
+    svg.select(".number-of-stars").attr("y", height - margin.bottom - 70);
+    svg.select(".creator-name").attr("y", height - margin.bottom - 90);
 
     svg.select(".y-label").attr("x", -height / 2);
 
