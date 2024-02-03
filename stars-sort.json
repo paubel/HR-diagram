@@ -2027,5 +2027,70 @@
     "age": 12e9,
     "mass": 0.81,
     "type": "subgiant"
+  },
+  {
+    "name": "G 240-72",
+    "temperature": 5590,
+    "luminosity": 0.000085,
+    "spectralClass": "DQP9.0",
+    "radius": 0.00984,
+    "constellation": "Draco",
+    "distance": 20.259,
+    "apparentMagnitude": 14.15,
+    "age": 5.69e9,
+    "mass": 0.81,
+    "type": "white dwarf"
+  },
+  {
+    "name": "LP 145-141",
+    "temperature": 8500,
+    "luminosity": 0.0005,
+    "spectralClass": "DQ6",
+    "radius": 0.01,
+    "constellation": "Musca",
+    "distance": 15.123,
+    "apparentMagnitude": 11.5,
+    "age": 1.44e9,
+    "mass": 0.56,
+    "type": "white dwarf"
+  },
+  {
+    "name": "WD 1337+705",
+    "temperature": 21290,
+    "luminosity": 0.03,
+    "spectralClass": "DA2.4",
+    "radius": 0.013,
+    "constellation": "Ursa Minor",
+    "distance": 86.49,
+    "apparentMagnitude": 12.773,
+    "age": null,
+    "mass": 0.59,
+    "type": "white dwarf"
+  },
+  {
+    "name": "IK Pegasi B",
+    "temperature": 35500,
+    "luminosity": 0.12,
+    "spectralClass": "DA",
+    "radius": 0.006,
+    "constellation": "Pegasus",
+    "distance": 154,
+    "apparentMagnitude": 6.08,
+    "age": null,
+    "mass": 1.15,
+    "type": "white dwarf"
+  },
+  {
+    "name": "IK Pegasi A",
+    "temperature": 7624,
+    "luminosity": 6568,
+    "spectralClass": "A8m",
+    "radius": 1.47,
+    "constellation": "Pegasus",
+    "distance": 154,
+    "apparentMagnitude": 6.08,
+    "age": 300e6,
+    "mass": 1.65,
+    "type": "main sequence"
   }
 ]
