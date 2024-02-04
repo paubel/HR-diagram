@@ -31,7 +31,7 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([45000, 100])
+  .domain([37000, 100])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3

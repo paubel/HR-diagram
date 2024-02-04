@@ -867,19 +867,7 @@
     "mass": 0.63,
     "type": "main sequence"
   },
-  {
-    "name": "BAT99-98",
-    "temperature": 45000,
-    "luminosity": 5000000,
-    "spectralClass": "WN6",
-    "radius": 37.5,
-    "constellation": "Dorado",
-    "distance": 165000,
-    "apparentMagnitude": 13.38,
-    "age": 7500000,
-    "mass": 226,
-    "type": "hypergiant"
-  },
+
   {
     "name": "Gamma Draconis",
     "temperature": 3930,
