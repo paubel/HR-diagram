@@ -31,7 +31,7 @@ let tooltip = d3
 // Define scales for temperature, luminosity, and radius (logarithmic)
 const xScale = d3
   .scaleLinear()
-  .domain([37000, 100])
+  .domain([37000, 1100])
   .range([margin.left, width - margin.right]);
 
 const yScale = d3
@@ -399,7 +399,7 @@ d3.json("stars-sort.json").then(function (stars) {
       .enter()
       .append("text")
       .attr("class", "star-label")
-      .attr("x", (d) => xScale(d.temperature) + 10)
+      .attr("x", (d) => xScale(d.temperature) + 8)
       .attr("y", (d) => yScale(d.luminosity))
       .text((d) => d.name)
       .style("font-size", "11px")
@@ -409,7 +409,7 @@ d3.json("stars-sort.json").then(function (stars) {
     /*     d3.selectAll(".star-label").style("display", "none"); */
 
     labels
-      .attr("x", (d) => xScale(d.temperature) + 10)
+      .attr("x", (d) => xScale(d.temperature) + 8)
       .attr("y", (d) => yScale(d.luminosity));
 
     circles.exit().remove();
