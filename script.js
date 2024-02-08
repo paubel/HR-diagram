@@ -403,10 +403,8 @@ d3.json("stars-sort.json").then(function (stars) {
       .attr("y", (d) => yScale(d.luminosity))
       .text((d) => d.name)
       .style("font-size", "11px")
-      .style("fill", "#fff")
+      .style("fill", "#f2f2f2")
       .style("text-shadow", "2px 2px 4px #000");
-
-    /*     d3.selectAll(".star-label").style("display", "none"); */
 
     labels
       .attr("x", (d) => xScale(d.temperature) + 8)
@@ -483,7 +481,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .attr("y", (d) => yScale(d.luminosity))
     .text((d) => d.name)
     .style("font-size", "11px") // Increase the font size
-    .style("fill", "#fff") // Change the font color to white
+    .style("fill", "#f2f2f2")
     .style("text-shadow", "2px 2px 4px #000"); // Add a black text shadow
 
   // Define a custom locale with space as the thousand separator
