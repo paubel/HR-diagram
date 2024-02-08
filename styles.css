@@ -1,9 +1,13 @@
+/* Pull test */
+
 :root {
   --primary-color: #444;
   --background-color: #121212;
-  --text-color: #ccff00;
+  /* --text-color: #ccff00; */
+  --text-color: cyan;
   --border-color: #ebebeb;
 }
+
 #hr-diagram {
   /*  margin-top: -25px; */
   width: 100svw;
