@@ -36,7 +36,7 @@ const xScale = d3
 
 const yScale = d3
   .scaleLog()
-  .domain([0.00003, 7000000])
+  .domain([0.00007, 6000000])
   .range([height - margin.bottom, margin.top]);
 
 //const radiusScale = d3.scaleLog().domain([0.01, 1000]).range([2, 20]); // Original
@@ -514,7 +514,7 @@ d3.json("stars-sort.json").then(function (stars) {
     /* .attr("transform", `translate(0, ${height - margin.bottom})`) */
     .attr(
       "transform",
-      `translate(${margin.left - 60}, ${height - margin.bottom})`
+      `translate(${margin.left - 60}, ${height - margin.bottom + 23})`
     ) // Decrease the value to move the x-axis to the left
     .call(xAxis);
 
@@ -528,7 +528,7 @@ d3.json("stars-sort.json").then(function (stars) {
   svg
     .append("g")
     .attr("class", "y-axis")
-    .attr("transform", `translate(${margin.left - 30}, 0)`)
+    .attr("transform", `translate(${margin.left - 31}, 0)`)
     .call(yAxis)
     .selectAll("text")
     .attr("transform", "rotate(-60)") // Rotate the labels -45 degrees
@@ -539,7 +539,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .attr("class", "x-label")
     .attr("x", width / 2)
-    .attr("y", height - 3)
+    .attr("y", height - 30)
     .style("text-anchor", "middle")
     .text("Temperature (K)");
 
@@ -548,7 +548,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .append("text")
     .attr("class", "y-label")
     .attr("x", -height / 2 - 20)
-    .attr("y", 15)
+    .attr("y", 55) //here
     .attr("transform", "rotate(-90)")
     .style("text-anchor", "middle")
     .text("Luminosity (L⊙)");
@@ -622,7 +622,7 @@ d3.json("stars-sort.json").then(function (stars) {
     // Redraw the axes
     svg
       .select(".x-axis")
-      .attr("transform", `translate(0, ${height - margin.bottom})`)
+      .attr("transform", `translate(0, ${height - margin.bottom + 18})`)
       .call(d3.axisBottom(xScale))
       .call(xAxis);
 
@@ -649,7 +649,7 @@ d3.json("stars-sort.json").then(function (stars) {
     svg
       .select(".x-label")
       .attr("x", width / 2)
-      .attr("y", height - margin.bottom + 35); // Adjust this value as needed
+      .attr("y", height - margin.bottom + 5); // Adjust this value as needed
 
     svg
       .selectAll(".star-label") // Select only the star labels
