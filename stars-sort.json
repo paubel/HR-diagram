@@ -542,6 +542,19 @@
     "type": "giant"
   },
   {
+    "name": "Aspidiske",
+    "temperature": 7500,
+    "luminosity": 4900,
+    "spectralClass": "A9Ib or A7Ib",
+    "radius": 43,
+    "constellation": "Carina",
+    "distance": 690,
+    "apparentMagnitude": 2.21,
+    "age": 37400000,
+    "mass": 7.4,
+    "type": "supergiant"
+  },
+  {
     "name": "Schedar",
     "temperature": 4530,
     "luminosity": 676,
@@ -699,6 +712,19 @@
     "type": "giant"
   },
   {
+    "name": "Menkent",
+    "temperature": 4980,
+    "luminosity": 60,
+    "spectralClass": "K0 III",
+    "radius": 10.6,
+    "constellation": "Centaurus",
+    "distance": 58.8,
+    "apparentMagnitude": 2.06,
+    "age": null,
+    "mass": 1.27,
+    "type": "giant"
+  },
+  {
     "name": "Tau Ceti",
     "temperature": 5320,
     "luminosity": 0.45,
@@ -736,6 +762,19 @@
     "age": null,
     "mass": 0.1195,
     "type": "red dwarf"
+  },
+  {
+    "name": "Diphda",
+    "temperature": 4797,
+    "luminosity": 139.1,
+    "spectralClass": "K0 III or G9.5III",
+    "radius": 16.78,
+    "constellation": "Cetus",
+    "distance": 96.3,
+    "apparentMagnitude": 2.02,
+    "age": 1000000000,
+    "mass": 2.8,
+    "type": "giant"
   },
   {
     "name": "Beta Comae Berenices",
@@ -867,7 +906,6 @@
     "mass": 0.63,
     "type": "main sequence"
   },
-
   {
     "name": "Gamma Draconis",
     "temperature": 3930,
@@ -1142,6 +1180,19 @@
     "type": "subgiant"
   },
   {
+    "name": "Tiaki",
+    "temperature": 3480,
+    "luminosity": 2500,
+    "spectralClass": "M5 III or M4.5III",
+    "radius": 180,
+    "constellation": "Grus",
+    "distance": 177,
+    "apparentMagnitude": 2.146,
+    "age": null,
+    "mass": 2.4,
+    "type": "giant"
+  },
+  {
     "name": "Alphard",
     "temperature": 4120,
     "luminosity": 780,
@@ -1387,6 +1438,19 @@
     "age": 1440000000,
     "mass": 0.56,
     "type": "white dwarf"
+  },
+  {
+    "name": "Rasalhague A",
+    "temperature": 7900,
+    "luminosity": 25.3,
+    "spectralClass": "A5IV",
+    "radius": 2.6,
+    "constellation": "Ophiuchus",
+    "distance": 48.6,
+    "apparentMagnitude": 2.07,
+    "age": 770000000,
+    "mass": 2.4,
+    "type": "subgiant"
   },
   {
     "name": "Alnilam",
@@ -1722,30 +1786,17 @@
     "type": "main sequence"
   },
   {
-    "name": "Electra",
-    "temperature": 13484,
-    "luminosity": 940,
-    "spectralClass": "B6IIIe",
-    "radius": 6.09,
-    "constellation": "Taurus",
-    "distance": 375,
-    "apparentMagnitude": 3.7,
-    "age": 115000000,
-    "mass": 5.6,
-    "type": "giant"
-  },
-  {
-    "name": "Barnard’s Star",
-    "temperature": 3134,
-    "luminosity": 0.0004,
-    "spectralClass": "M4 V",
-    "radius": 0.196,
-    "constellation": "Taurus",
-    "distance": 5.978,
-    "apparentMagnitude": 9.5,
-    "age": 10100000000,
-    "mass": 0.144,
-    "type": "red dwarf"
+    "name": "Naos",
+    "temperature": 40000,
+    "luminosity": 813000,
+    "spectralClass": "O4If(n)p",
+    "radius": 20,
+    "constellation": "Puppis",
+    "distance": 1080,
+    "apparentMagnitude": 2.25,
+    "age": 3200000,
+    "mass": 56.1,
+    "type": "supergiant"
   },
   {
     "name": "Kaus Australis A",
@@ -1808,6 +1859,19 @@
     "age": null,
     "mass": 46,
     "type": "hypergiant"
+  },
+  {
+    "name": "Nunki",
+    "temperature": 18890,
+    "luminosity": 3300,
+    "spectralClass": "B2.5 V",
+    "radius": 4.5,
+    "constellation": "Sagittarius",
+    "distance": 228,
+    "apparentMagnitude": 2.05,
+    "age": 31.4,
+    "mass": 7.8,
+    "type": "main sequence"
   },
   {
     "name": "Antares A",
@@ -1875,6 +1939,32 @@
     "type": "hypergiant"
   },
   {
+    "name": "Electra",
+    "temperature": 13484,
+    "luminosity": 940,
+    "spectralClass": "B6IIIe",
+    "radius": 6.09,
+    "constellation": "Taurus",
+    "distance": 375,
+    "apparentMagnitude": 3.7,
+    "age": 115000000,
+    "mass": 5.6,
+    "type": "giant"
+  },
+  {
+    "name": "Barnard’s Star",
+    "temperature": 3134,
+    "luminosity": 0.0004,
+    "spectralClass": "M4 V",
+    "radius": 0.196,
+    "constellation": "Taurus",
+    "distance": 5.978,
+    "apparentMagnitude": 9.5,
+    "age": 10100000000,
+    "mass": 0.144,
+    "type": "red dwarf"
+  },
+  {
     "name": "Aldebaran",
     "temperature": 3910,
     "luminosity": 425,
@@ -1925,6 +2015,32 @@
     "age": 11490000000,
     "mass": 0.553,
     "type": "white dwarf"
+  },
+  {
+    "name": "Alcyone",
+    "temperature": 12258,
+    "luminosity": 2030,
+    "spectralClass": "B5IIIe",
+    "radius": 9.3,
+    "constellation": "Taurus",
+    "distance": 409,
+    "apparentMagnitude": 2.87,
+    "age": 70000000,
+    "mass": 6,
+    "type": "giant"
+  },
+  {
+    "name": "Alcyone",
+    "temperature": 12258,
+    "luminosity": 2030,
+    "spectralClass": "B5IIIe",
+    "radius": 9.3,
+    "constellation": "Taurus",
+    "distance": 409,
+    "apparentMagnitude": 2.87,
+    "age": 70000000,
+    "mass": 6,
+    "type": "giant"
   },
   {
     "name": "Mothallah",
@@ -2094,6 +2210,19 @@
     "type": "red dwarf"
   },
   {
+    "name": "Groombridge 1618",
+    "temperature": 3970,
+    "luminosity": 0.049,
+    "spectralClass": "K7.5 Ve",
+    "radius": 0.605,
+    "constellation": "Ursa Major",
+    "distance": 15.886,
+    "apparentMagnitude": 6.6,
+    "age": 6600000000,
+    "mass": 0.67,
+    "type": "main sequence"
+  },
+  {
     "name": "Polaris Aa",
     "temperature": 6015,
     "luminosity": 1260,
@@ -2131,6 +2260,19 @@
     "age": null,
     "mass": 0.59,
     "type": "white dwarf"
+  },
+  {
+    "name": "Kochab",
+    "temperature": 4030,
+    "luminosity": 390,
+    "spectralClass": "K4 III",
+    "radius": 42.06,
+    "constellation": "Ursa Minor",
+    "distance": 130.9,
+    "apparentMagnitude": 2.08,
+    "age": 2.95,
+    "mass": 2.2,
+    "type": "giant"
   },
   {
     "name": "Alsephina Aa",
@@ -2172,6 +2314,19 @@
     "type": "main sequence"
   },
   {
+    "name": "Suhail",
+    "temperature": 3900,
+    "luminosity": 7900,
+    "spectralClass": "K4 Ib",
+    "radius": 210,
+    "constellation": "Vela",
+    "distance": 545,
+    "apparentMagnitude": 2.21,
+    "age": 31600000,
+    "mass": 7,
+    "type": "supergiant"
+  },
+  {
     "name": "Spica A",
     "temperature": 25300,
     "luminosity": 20512,
@@ -2196,161 +2351,5 @@
     "age": null,
     "mass": 7.21,
     "type": "main sequence"
-  },
-  {
-    "name": "Groombridge 1618",
-    "temperature": 3970,
-    "luminosity": 0.049,
-    "spectralClass": "K7.5 Ve",
-    "radius": 0.605,
-    "constellation": "Ursa Major",
-    "distance": 15.886,
-    "apparentMagnitude": 6.6,
-    "age": 6.6e9,
-    "mass": 0.67,
-    "type": "main sequence"
-  },
-  {
-    "name": "Alcyone",
-    "temperature": 12258,
-    "luminosity": 2030,
-    "spectralClass": "B5IIIe",
-    "radius": 9.3,
-    "constellation": "Taurus",
-    "distance": 409,
-    "apparentMagnitude": 2.87,
-    "age": 70e6,
-    "mass": 6,
-    "type": "giant"
-  },
-  {
-    "name": "Alcyone",
-    "temperature": 12258,
-    "luminosity": 2030,
-    "spectralClass": "B5IIIe",
-    "radius": 9.3,
-    "constellation": "Taurus",
-    "distance": 409,
-    "apparentMagnitude": 2.87,
-    "age": 70e6,
-    "mass": 6,
-    "type": "giant"
-  },
-  {
-    "name": "Diphda",
-    "temperature": 4797,
-    "luminosity": 139.1,
-    "spectralClass": "K0 III or G9.5III",
-    "radius": 16.78,
-    "constellation": "Cetus",
-    "distance": 96.3,
-    "apparentMagnitude": 2.02,
-    "age": 1e9,
-    "mass": 2.8,
-    "type": "giant"
-  },
-  {
-    "name": "Nunki",
-    "temperature": 18890,
-    "luminosity": 3300,
-    "spectralClass": "B2.5 V",
-    "radius": 4.5,
-    "constellation": "Sagittarius",
-    "distance": 228,
-    "apparentMagnitude": 2.05,
-    "age": 31.4,
-    "mass": 7.8,
-    "type": "main sequence"
-  },
-  {
-    "name": "Menkent",
-    "temperature": 4980,
-    "luminosity": 60,
-    "spectralClass": "K0 III",
-    "radius": 10.6,
-    "constellation": "Centaurus",
-    "distance": 58.8,
-    "apparentMagnitude": 2.06,
-    "age": null,
-    "mass": 1.27,
-    "type": "giant"
-  },
-  {
-    "name": "Kochab",
-    "temperature": 4030,
-    "luminosity": 390,
-    "spectralClass": "K4 III",
-    "radius": 42.06,
-    "constellation": "Ursa Minor",
-    "distance": 130.9,
-    "apparentMagnitude": 2.08,
-    "age": 2.95,
-    "mass": 2.2,
-    "type": "giant"
-  },
-  {
-    "name": "Tiaki",
-    "temperature": 3480,
-    "luminosity": 2500,
-    "spectralClass": "M5 III or M4.5III",
-    "radius": 180,
-    "constellation": "Grus",
-    "distance": 177,
-    "apparentMagnitude": 2.146,
-    "age": null,
-    "mass": 2.4,
-    "type": "giant"
-  },
-  {
-    "name": "Rasalhague A",
-    "temperature": 7900,
-    "luminosity": 25.3,
-    "spectralClass": "A5IV",
-    "radius": 2.6,
-    "constellation": "Ophiuchus",
-    "distance": 48.6,
-    "apparentMagnitude": 2.07,
-    "age": 0.77e9,
-    "mass": 2.4,
-    "type": "subgiant"
-  },
-  {
-    "name": "Naos",
-    "temperature": 40000,
-    "luminosity": 813000,
-    "spectralClass": "O4If(n)p",
-    "radius": 20,
-    "constellation": "Puppis",
-    "distance": 1080,
-    "apparentMagnitude": 2.25,
-    "age": 3.2e6,
-    "mass": 56.1,
-    "type": "supergiant"
-  },
-  {
-    "name": "Aspidiske",
-    "temperature": 7500,
-    "luminosity": 4900,
-    "spectralClass": "A9Ib or A7Ib",
-    "radius": 43,
-    "constellation": "Carina",
-    "distance": 690,
-    "apparentMagnitude": 2.21,
-    "age": 37.4e6,
-    "mass": 7.4,
-    "type": "supergiant"
-  },
-  {
-    "name": "Suhail",
-    "temperature": 3900,
-    "luminosity": 7900,
-    "spectralClass": "K4 Ib",
-    "radius": 210,
-    "constellation": "Vela",
-    "distance": 545,
-    "apparentMagnitude": 2.21,
-    "age": 31.6e6,
-    "mass": 7,
-    "type": "supergiant"
   }
 ]
