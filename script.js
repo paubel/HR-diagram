@@ -4,10 +4,6 @@ let height = parseInt(container.style("height"));
 let checkbox = d3.select("#star-name-toggle");
 let starNames = d3.selectAll(".star-label");
 
-// Hide star labels initially
-
-/* const width = 800;
-const height = 600; */
 const margin = { top: 20, right: 20, bottom: 40, left: 60 };
 
 const svg = d3
@@ -174,7 +170,6 @@ d3.json("stars-sort.json").then(function (stars) {
           (star) => star.spectralClass.charAt(0) == "L"
         );
         break;
-
       case "O stars":
         filteredStars = stars.filter(
           (star) => star.spectralClass.charAt(0) == "O"
@@ -215,7 +210,6 @@ d3.json("stars-sort.json").then(function (stars) {
           (star) => star.spectralClass.charAt(0) == "D"
         );
         break;
-
       case "Distance < 10 ly":
         filteredStars = stars.filter((star) => star.distance <= 10);
         break;
