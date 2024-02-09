@@ -1725,11 +1725,11 @@
     "name": "Electra",
     "temperature": 13484,
     "luminosity": 940,
-    "spectralClass": "B6 IIIe",
+    "spectralClass": "B6IIIe",
     "radius": 6.09,
-    "constellation": "Pleiades",
-    "distance": 400,
-    "apparentMagnitude": -1.77,
+    "constellation": "Taurus",
+    "distance": 375,
+    "apparentMagnitude": 3.7,
     "age": 115000000,
     "mass": 5.6,
     "type": "giant"
@@ -2209,5 +2209,18 @@
     "age": 6.6e9,
     "mass": 0.67,
     "type": "main sequence"
+  },
+  {
+    "name": "Alcyone",
+    "temperature": 12258,
+    "luminosity": 2030,
+    "spectralClass": "B5IIIe",
+    "radius": 9.3,
+    "constellation": "Taurus",
+    "distance": 409,
+    "apparentMagnitude": 2.87,
+    "age": 70e6,
+    "mass": 6,
+    "type": "giant"
   }
 ]
