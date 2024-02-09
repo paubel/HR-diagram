@@ -515,6 +515,15 @@ d3.json("stars-sort.json").then(function (stars) {
       `translate(${margin.left - 60}, ${height - margin.bottom + 23})`
     ) // Decrease the value to move the x-axis to the left
     .call(xAxis);
+  //Gridlines in x axis
+  svg
+    .selectAll(".tick")
+    .append("line")
+    .classed("grid-line", true)
+    .attr("y1", 0)
+    .attr("y2", -height)
+    .attr("stroke", "#ccff00")
+    .attr("stroke-width", 0.2);
 
   // Define y-axis with conditional decimal places and thousand separator
   const yAxis = d3
@@ -523,6 +532,7 @@ d3.json("stars-sort.json").then(function (stars) {
     .tickFormat(function (d) {
       return d < 1 ? parseFloat(d3.format(".3f")(d)) : format(d);
     });
+
   svg
     .append("g")
     .attr("class", "y-axis")
@@ -531,7 +541,15 @@ d3.json("stars-sort.json").then(function (stars) {
     .selectAll("text")
     .attr("transform", "rotate(-60)") // Rotate the labels -45 degrees
     .style("text-anchor", "end");
-
+  //Gridlines in y axis function
+  svg
+    .selectAll(".tick")
+    .append("line")
+    .classed("grid-line", true)
+    .attr("x1", 0)
+    .attr("x2", width)
+    .attr("stroke", "#ccff00")
+    .attr("stroke-width", 0.2);
   // Add x-axis label
   svg
     .append("text")
