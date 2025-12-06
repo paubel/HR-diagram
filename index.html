@@ -28,6 +28,7 @@
     <nav>
         <button class="btn-contact open-button">About Me / Contact </button>
         <a href="https://astronomysafari.netlify.app/" target="_blank">Astronomy Safari</a>
+        <a href="https://starmapfilter.netlify.app/" target="_blank">Star Map Filter</a>
     </nav>
     <dialog class="modal" id="modal">
 
@@ -59,17 +60,110 @@
         </div>
 
     </dialog>
-    <div class="container">
-        <label for="dropdown">Select property</label>
-        <select id="dropdown"></select>
+    <button id="panel-toggle" class="panel-toggle" aria-expanded="true">Hide panel</button>
+    <aside class="control-card">
+        <header class="control-header">
+            <div>
+                <p class="eyebrow">H-R filter</p>
+                <h1>Stars</h1>
+            </div>
+            <button class="ghost" id="reset-filters">Reset</button>
+        </header>
 
-        <!--    <label for="star-name-toggle" class="star-name-toggle"> Toggle Star Names</label>
-        <input type="checkbox" id="star-name-toggle" checked> -->
+        <section class="slider-group">
+            <label>Temperature (K)
+                <div class="dual-range" data-dir="reversed">
+                    <input type="range" min="1100" max="40000" step="100" id="temp-min" value="1100">
+                    <input type="range" min="1100" max="40000" step="100" id="temp-max" value="40000">
+                    <div class="range-track temp-track"></div>
+                </div>
+                <div class="range-readout"><span id="temp-min-val">1 100</span>–<span id="temp-max-val">40 000</span>
+                </div>
+            </label>
 
-        <label class="switch">Star name<input type="checkbox" id="star-name-toggle" checked>
-            <span class="slider round"></span>
-        </label>
-    </div>
+            <label>Distance (ly, log)
+                <div class="dual-range">
+                    <input type="range" min="0" max="4.3" step="0.05" id="dist-min" value="0">
+                    <input type="range" min="1" max="4.3" step="0.05" id="dist-max" value="4.3">
+                    <div class="range-track dist-track"></div>
+                </div>
+                <div class="range-readout"><span id="dist-min-val">1</span>–<span id="dist-max-val">200 000</span></div>
+            </label>
+
+            <label>Apparent magnitude
+                <div class="dual-range">
+                    <input type="range" min="-27" max="28" step="0.1" id="mag-min" value="-27">
+                    <input type="range" min="-27" max="28" step="0.1" id="mag-max" value="28">
+                    <div class="range-track mag-track"></div>
+                </div>
+                <div class="range-readout"><span id="mag-min-val">-27.0</span><span>–</span><span id="mag-max-val">28.0</span>
+                </div>
+            </label>
+
+            <label>Radius (R⊙, log)
+                <div class="dual-range">
+                    <input type="range" min="-4" max="3" step="0.05" id="rad-min" value="-4">
+                    <input type="range" min="-4" max="3" step="0.05" id="rad-max" value="3">
+                    <div class="range-track rad-track"></div>
+                </div>
+                <div class="range-readout"><span id="rad-min-val">0.0001</span><span>–</span><span id="rad-max-val">1 000</span></div>
+            </label>
+        </section>
+
+        <section class="chips">
+            <p class="section-label">Type</p>
+            <div class="chip-row">
+                <button type="button" data-type="main sequence">Main seq</button>
+                <button type="button" data-type="giant">Giant</button>
+                <button type="button" data-type="supergiant">Supergiant</button>
+                <button type="button" data-type="hypergiant">Hypergiant</button>
+                <button type="button" data-type="white dwarf">White dwarf</button>
+                <button type="button" data-type="red dwarf">Red dwarf</button>
+            </div>
+            <p class="section-label">Spectral</p>
+            <div class="chip-row">
+                <button type="button" data-spectral="O">O</button>
+                <button type="button" data-spectral="B">B</button>
+                <button type="button" data-spectral="A">A</button>
+                <button type="button" data-spectral="F">F</button>
+                <button type="button" data-spectral="G">G</button>
+                <button type="button" data-spectral="K">K</button>
+                <button type="button" data-spectral="M">M</button>
+                <button type="button" data-spectral="L">L</button>
+                <button type="button" data-spectral="D">D</button>
+            </div>
+        </section>
+
+        <section class="toggles">
+            <label class="switch">Show names
+                <input type="checkbox" id="names-toggle" checked>
+                <span class="toggle-thumb"></span>
+            </label>
+            <label class="switch">Declutter
+                <input type="checkbox" id="declutter-toggle">
+                <span class="toggle-thumb"></span>
+            </label>
+            <label class="switch">Highlight neighbors
+                <input type="checkbox" id="halo-toggle">
+                <span class="toggle-thumb"></span>
+            </label>
+        </section>
+
+        <section class="legend">
+            <div class="legend-row">
+                <div class="gradient-bar"></div>
+                <span>Hot → Cool</span>
+            </div>
+            <div class="legend-row">
+                <svg height="20" width="80" aria-hidden="true">
+                    <circle cx="12" cy="10" r="4"></circle>
+                    <circle cx="38" cy="10" r="8"></circle>
+                    <circle cx="68" cy="10" r="12"></circle>
+                </svg>
+                <span>Radius scale</span>
+            </div>
+        </section>
+    </aside>
 
     <svg id="hr-diagram"></svg>
     <script src="script.js"></script>
