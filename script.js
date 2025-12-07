@@ -76,6 +76,9 @@ const radMaxInput = document.getElementById("rad-max");
 const radTrack = document.querySelector(".rad-track");
 const radMinVal = document.getElementById("rad-min-val");
 const radMaxVal = document.getElementById("rad-max-val");
+const constellationList = d3.select("#constellation-list");
+const constellationSearch = document.getElementById("constellation-search");
+const clearConstellationsBtn = document.getElementById("clear-constellations");
 const namesToggle = document.getElementById("names-toggle");
 const declutterToggle = document.getElementById("declutter-toggle");
 const haloToggle = document.getElementById("halo-toggle");
@@ -105,12 +108,14 @@ const filterState = {
   radiusLog: [-4, 3],
   types: new Set(allTypes),
   spectral: new Set(allSpectral),
+  constellations: new Set(),
   declutter: false,
   halo: false,
   showNames: true,
 };
 
 let allStars = [];
+let allConstellations = [];
 
 // Locale formatter with spaces
 const formatLocale = d3
@@ -323,6 +328,65 @@ function updateRadTrack(rMin, rMax) {
   radTrack.style.width = `${width}%`;
 }
 
+function buildConstellationList(stars) {
+  if (!constellationList || constellationList.empty()) return;
+  allConstellations = d3
+    .rollups(
+      stars.filter((s) => s.constellation),
+      (v) => v.length,
+      (d) => d.constellation
+    )
+    .map(([name, count]) => ({ name, count }))
+    .sort(
+      (a, b) =>
+        d3.descending(a.count, b.count) || d3.ascending(a.name, b.name)
+    );
+  renderConstellationList("");
+}
+
+function renderConstellationList(filterText) {
+  if (!constellationList) return;
+  const needle = (filterText || "").toLowerCase();
+  const filtered = allConstellations.filter((d) =>
+    d.name.toLowerCase().includes(needle)
+  );
+
+  const chips = constellationList
+    .selectAll(".constellation-chip")
+    .data(filtered, (d) => d.name);
+
+  chips.exit().remove();
+
+  const entered = chips
+    .enter()
+    .append("button")
+    .attr("type", "button")
+    .attr("class", "constellation-chip")
+    .html(
+      (d) =>
+        `<span class="name">${d.name}</span><span class="count">${d.count}</span>`
+    );
+
+  const merged = entered.merge(chips).classed("active", (d) =>
+    filterState.constellations.has(d.name)
+  );
+
+  merged.select(".name").text((d) => d.name);
+  merged.select(".count").text((d) => d.count);
+
+  constellationList.selectAll(".constellation-chip").on("click", function (event, d) {
+    const btn = d3.select(this);
+    const nowActive = !btn.classed("active");
+    btn.classed("active", nowActive);
+    if (nowActive) {
+      filterState.constellations.add(d.name);
+    } else {
+      filterState.constellations.delete(d.name);
+    }
+    applyFilters();
+  });
+}
+
 function declutterLabels(selection) {
   const seen = [];
   selection.each(function () {
@@ -441,6 +505,7 @@ function applyFilters() {
   const [radMinLog, radMaxLog] = filterState.radiusLog;
   const radiusMin = Math.pow(10, radMinLog);
   const radiusMax = Math.pow(10, radMaxLog);
+  const constellationsActive = filterState.constellations;
 
   const filtered = allStars.filter((star) => {
     const tempOk = star.temperature >= tempMin && star.temperature <= tempMax;
@@ -460,7 +525,18 @@ function applyFilters() {
     const spectralOk =
       filterState.spectral.size === 0 ||
       filterState.spectral.has(spectralClass);
-    return tempOk && distOk && magOk && radiusOk && typeOk && spectralOk;
+    const constellationOk =
+      constellationsActive.size === 0 ||
+      constellationsActive.has(star.constellation);
+    return (
+      tempOk &&
+      distOk &&
+      magOk &&
+      radiusOk &&
+      typeOk &&
+      spectralOk &&
+      constellationOk
+    );
   });
 
   render(filtered);
@@ -549,6 +625,10 @@ function resetControls() {
   radMinVal.textContent = "0.0001";
   radMaxVal.textContent = "1 000";
   updateRadTrack(-4, 3);
+  filterState.constellations = new Set();
+  if (constellationSearch) constellationSearch.value = "";
+  if (constellationList)
+    constellationList.selectAll(".constellation-chip").classed("active", false);
   namesToggle.checked = true;
   declutterToggle.checked = false;
   haloToggle.checked = false;
@@ -562,6 +642,7 @@ d3.json("stars-sort.json").then((stars) => {
   syncDistance();
   syncMagnitude();
   syncRadius();
+  buildConstellationList(stars);
   render(stars);
 });
 
@@ -604,6 +685,22 @@ radMaxInput.addEventListener("input", () => {
   syncRadius();
   applyFilters();
 });
+
+if (constellationSearch) {
+  constellationSearch.addEventListener("input", (e) => {
+    renderConstellationList(e.target.value || "");
+  });
+}
+
+if (clearConstellationsBtn) {
+  clearConstellationsBtn.addEventListener("click", () => {
+    filterState.constellations.clear();
+    if (constellationList)
+      constellationList.selectAll(".constellation-chip").classed("active", false);
+    renderConstellationList(constellationSearch ? constellationSearch.value : "");
+    applyFilters();
+  });
+}
 
 namesToggle.addEventListener("change", (e) => {
   filterState.showNames = e.target.checked;

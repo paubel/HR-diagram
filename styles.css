@@ -42,7 +42,7 @@ body {
 
 nav {
   position: fixed;
-  bottom: 84px;
+  bottom: 94px;
   left: 44px;
   gap: 0.3rem 1rem;
   z-index: 1;
@@ -281,6 +281,64 @@ svg {
 
 .chip-row + .section-label {
   margin-top: 6px;
+}
+
+.constellations {
+  display: grid;
+  gap: 6px;
+}
+
+.constellation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.constellations input[type="search"] {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-color);
+}
+
+.constellation-list {
+  max-height: 140px;
+  overflow: auto;
+  display: grid;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.constellation-chip {
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.constellation-chip .count {
+  color: var(--muted);
+  font-size: 11px;
+  margin-left: 8px;
+}
+
+.constellation-chip.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(125, 211, 255, 0.12);
+}
+
+.ghost.small {
+  padding: 4px 8px;
+  font-size: 11px;
 }
 
 .toggles {
