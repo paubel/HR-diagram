@@ -42,13 +42,8 @@ body {
 
 nav {
   position: fixed;
-<<<<<<< HEAD
-  bottom: -56px;
-  left: 244px;
-=======
-  bottom: 94px;
-  left: 44px;
->>>>>>> 18c752501a701395de486f51d2f09694581eeb8d
+  bottom: 34px;
+  left: 14px;
   gap: 0.3rem 1rem;
   z-index: 1;
   display: flex;
@@ -60,7 +55,7 @@ nav {
   nav {
     flex-direction: column;
     align-items: center;
-    left: 244px;
+    left: 14px;
   }
 }
 

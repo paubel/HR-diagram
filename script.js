@@ -31,7 +31,8 @@ const xScale = d3
 
 const yScale = d3
   .scaleLog()
-  .domain([0.00007, 6000000])
+  .domain([0.00004, 8000000])
+  .clamp(true)
   .range([height - margin.bottom, margin.top]);
 
 const radiusScale = d3.scaleLog().domain([0.0003, 1000]).range([0.8, 16]);
